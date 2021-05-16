@@ -107,6 +107,20 @@
     .link {
       text-decoration: none;
     }
+
+    @media (min-width: 800px) {
+      .cocktails {
+        display: flex;
+        grid-gap: 15px;
+      }
+      .wrapper {
+        max-width: 1200px;
+      }
+      .cocktail {
+        flex-basis: 0;
+        flex-grow: 1;
+      }
+    }
   </style>
 
   <body>
@@ -114,64 +128,64 @@
       <h1>🍹 Cocktails 🍹</h1>
 
       <h2>My 3 favourite cocktails</h2>
+      <div class="cocktails">
+        <div class="cocktail">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/354/original/tequila_sunrise.jpeg?1618689372"
+            alt="tequila sunrise"
+            width="300"
+          />
+          <p>
+            The
+            <a
+              href="https://en.wikipedia.org/wiki/Tequila_sunrise_(cocktail)"
+              target="_blank"
+            >
+              tequila sunrise</a
+            >
+            is a cocktail made of
+            <em>tequila, orange juice, and grenadine syrup</em>.
+          </p>
+        </div>
 
-      <div class="cocktail">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/354/original/tequila_sunrise.jpeg?1618689372"
-          alt="tequila sunrise"
-          width="300"
-        />
-        <p>
-          The
-          <a
-            href="https://en.wikipedia.org/wiki/Tequila_sunrise_(cocktail)"
-            target="_blank"
-          >
-            tequila sunrise</a
-          >
-          is a cocktail made of
-          <em>tequila, orange juice, and grenadine syrup</em>.
-        </p>
+        <div class="cocktail">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/355/original/tom_collins.jpeg?1618689378"
+            width="300"
+            alt="Tom Collins"
+          />
+          <p>
+            The
+            <a href="https://en.wikipedia.org/wiki/Tom_Collins" target="_blank">
+              Tom Collins</a
+            >
+            is a Collins cocktail made from
+            <em>gin, lemon juice, sugar, and carbonated water</em>.
+          </p>
+        </div>
+
+        <div class="cocktail">
+          <img
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/353/original/pornstar_martini.jpeg?1618689363"
+            width="300"
+            alt="porn star martini"
+          />
+          <p>
+            The
+            <a
+              href="https://en.wikipedia.org/wiki/Porn_star_martini"
+              target="_blank"
+            >
+              porn star martini</a
+            >
+            is a cold, passion fruit-flavoured cocktail made with
+            <em
+              >vanilla-flavoured vodka, Passoã, passion fruit juice, and lime
+              juice</em
+            >.
+          </p>
+        </div>
       </div>
-
-      <div class="cocktail">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/355/original/tom_collins.jpeg?1618689378"
-          width="300"
-          alt="Tom Collins"
-        />
-        <p>
-          The
-          <a href="https://en.wikipedia.org/wiki/Tom_Collins" target="_blank">
-            Tom Collins</a
-          >
-          is a Collins cocktail made from
-          <em>gin, lemon juice, sugar, and carbonated water</em>.
-        </p>
-      </div>
-
-      <div class="cocktail">
-        <img
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/353/original/pornstar_martini.jpeg?1618689363"
-          width="300"
-          alt="porn star martini"
-        />
-        <p>
-          The
-          <a
-            href="https://en.wikipedia.org/wiki/Porn_star_martini"
-            target="_blank"
-          >
-            porn star martini</a
-          >
-          is a cold, passion fruit-flavoured cocktail made with
-          <em
-            >vanilla-flavoured vodka, Passoã, passion fruit juice, and lime
-            juice</em
-          >.
-        </p>
-      </div>
-
       <p class="piece-of-text">
         The above are just a few examples of the endless cocktails you can make.
         <br />
