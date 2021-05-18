@@ -10,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Move files to html root
-        run: rsync /home/actions/actions-runner/_work/ullavs.nl/ullavs.nl/ /var/www/ullavs.nl/html/ -va --exclude .git --exclude .github
+        run: rsync /home/actions/actions-runner/_work/ullavs.nl/ullavs.nl/ /var/www/ullavs.nl/html/ -va --exclude .git --exclude .github --delete-after
