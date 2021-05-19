@@ -14,10 +14,8 @@
       body {
         line-height: 1.5;
         font-family: "Roboto", sans-serif;
-        margin: 0;
-      }
-
-      #main {
+        margin-left: 40px;
+        margin-right: 40px;
         background-color: #ed90a6;
       }
 
@@ -43,11 +41,33 @@
         border-radius: 8px;
         max-width: 100%;
         height: auto;
+        display: block;
       }
 
       #img-caption {
         text-align: center;
         font-style: italic;
+      }
+
+      #headline {
+        padding: 10px;
+        text-align: center;
+      }
+
+      .underline {
+        border-bottom: 2px solid black;
+        font-style: normal;
+      }
+
+      .footer {
+        text-align: center;
+        font-size: 12px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #090d0e;
+        font-weight: bold;
       }
     </style>
   </head>
@@ -68,8 +88,165 @@
           Roger Federer playing a backhand.
         </figcaption>
       </div>
-
-      <section id="tribute-info">Tournaments won:</section>
+      <br />
+      <section id="tribute-info">
+        <h3 id="headline">
+          Here is an overview of all
+          <em class="underline">103</em>
+          tournaments Roger Federer has won:
+        </h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>#Titles</th>
+              <th>Tournaments</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2001</td>
+              <td>1</td>
+              <td>Milan</td>
+            </tr>
+            <tr>
+              <td>2002</td>
+              <td>3</td>
+              <td>Sydney, ATP Masters 1000 Hamburg, Vienna</td>
+            </tr>
+            <tr>
+              <td>2003</td>
+              <td>7</td>
+              <td>
+                Marseille, Dubai, Munich, Halle, Wimbledon, Vienna, Tennis
+                Masters Cup
+              </td>
+            </tr>
+            <tr>
+              <td>2004</td>
+              <td>11</td>
+              <td>
+                Australian Open, Dubai, ATP Masters 1000 Indian Wells, ATP
+                Masters 1000 Hamburg, Halle, Wimbledon, Gstaad, ATP Masters 1000
+                Canada, US Open, Bangkok, Tennis Masters Cup
+              </td>
+            </tr>
+            <tr>
+              <td>2005</td>
+              <td>11</td>
+              <td>
+                Doha, Rotterdam, Dubai, ATP Masters 1000 Indian Wells, ATP
+                Masters 1000 Miami, ATP Masters 1000 Hamburg, Halle, Wimbledon,
+                ATP Masters 1000 Cincinnati, US Open, Bangkok
+              </td>
+            </tr>
+            <tr>
+              <td>2006</td>
+              <td>12</td>
+              <td>
+                Doha, Australian Open, ATP Masters 1000 Indian Wells, ATP
+                Masters 1000 Miami, Halle, Wimbledon, ATP Masters 1000 Canada,
+                US Open, Tokyo, ATP Masters 1000 Madrid, Basel, Tennis Masters
+                Cup
+              </td>
+            </tr>
+            <tr>
+              <td>2007</td>
+              <td>8</td>
+              <td>
+                Australian Open, Dubai, ATP Masters 1000 Hamburg, Wimbledon, ATP
+                Masters 1000 Cincinnati, US Open, Basel, Tennis Masters Cup
+              </td>
+            </tr>
+            <tr>
+              <td>2008</td>
+              <td>4</td>
+              <td>Estoril, Halle, US Open, Basel</td>
+            </tr>
+            <tr>
+              <td>2009</td>
+              <td>4</td>
+              <td>
+                ATP Masters 1000 Madrid, Roland Garros, Wimbledon, ATP Masters
+                1000 Cincinnati
+              </td>
+            </tr>
+            <tr>
+              <td>2010</td>
+              <td>5</td>
+              <td>
+                Australian Open, ATP Masters 1000 Cincinnati, Stockholm, Basel,
+                ATP Finals
+              </td>
+            </tr>
+            <tr>
+              <td>2011</td>
+              <td>4</td>
+              <td>Doha, Basel, ATP Masters 1000 Paris, ATP Finals</td>
+            </tr>
+            <tr>
+              <td>2012</td>
+              <td>6</td>
+              <td>
+                Rotterdam, Dubai, ATP Masters 1000 Indian Wells, ATP Masters
+                1000 Madrid, Wimbledon, ATP Masters 1000 Cincinnati
+              </td>
+            </tr>
+            <tr>
+              <td>2013</td>
+              <td>1</td>
+              <td>Halle</td>
+            </tr>
+            <tr>
+              <td>2014</td>
+              <td>5</td>
+              <td>
+                Dubai, Halle, ATP Masters 1000 Cincinnati, ATP Masters 1000
+                Shanghai, Basel
+              </td>
+            </tr>
+            <tr>
+              <td>2015</td>
+              <td>6</td>
+              <td>
+                Brisbane, Dubai, Istanbul, Halle, ATP Masters 1000 Cincinnati,
+                Basel
+              </td>
+            </tr>
+            <tr>
+              <td>2017</td>
+              <td>7</td>
+              <td>
+                Australian Open, ATP Masters 1000 Indian Wells, ATP Masters 1000
+                Miami, Halle, Wimbledon, ATP Masters 1000 Shanghai, Basel
+              </td>
+            </tr>
+            <tr>
+              <td>2018</td>
+              <td>4</td>
+              <td>Australian Open, Rotterdam, Stuttgart, Basel</td>
+            </tr>
+            <tr>
+              <td>2019</td>
+              <td>4</td>
+              <td>Dubai, ATP Masters 1000 Miami, Halle, Basel</td>
+            </tr>
+          </tbody>
+        </table>
+        If you want to stay up to date about all his activities, you should
+        check out
+        <a
+          href="https://www.atptour.com/en/players/roger-federer/f324/overview"
+          id="tribute-link"
+          target="_blank"
+          >here</a
+        >.
+      </section>
+      <hr />
+      <footer class="footer">
+        Coded by
+        <a href="https://ullavs.nl/" target="_blank">Ulla🆚</a>
+      </footer>
     </main>
   </body>
 </html>
