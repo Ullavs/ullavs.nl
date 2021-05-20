@@ -32,7 +32,7 @@
       #img-div {
         background-color: white;
         border-radius: 8px;
-        margin: 0 auto;
+        margin: 10px auto 30px;
         max-width: 500px;
         padding: 5px;
       }
@@ -50,13 +50,47 @@
       }
 
       #headline {
-        padding: 10px;
         text-align: center;
       }
 
       .underline {
         border-bottom: 2px solid black;
         font-style: normal;
+      }
+
+      table {
+        background-color: rgb(53, 51, 51);
+        color: #ed90a6;
+        margin: 30px auto;
+        border: 2px solid black;
+        border-radius: 8px;
+        padding: 10px;
+        border-spacing: 0;
+        text-align: justify;
+      }
+
+      @media (max-width: 500px) {
+        table {
+          font-size: 10px;
+        }
+        th {
+          width: 30px;
+        }
+      }
+
+      th {
+        text-align: left;
+        border-bottom: 2px solid white;
+        width: 40px;
+      }
+
+      td {
+        vertical-align: top;
+        padding: 1px;
+      }
+
+      p {
+        text-align: center;
       }
 
       .footer {
@@ -88,7 +122,6 @@
           Roger Federer playing a backhand.
         </figcaption>
       </div>
-      <br />
       <section id="tribute-info">
         <h3 id="headline">
           Here is an overview of all
@@ -98,15 +131,15 @@
         <table>
           <thead>
             <tr>
-              <th>Year</th>
-              <th>#Titles</th>
-              <th>Tournaments</th>
+              <th class="first-column">Year</th>
+              <th class="second-column">#Titles</th>
+              <th class="third-column">Tournaments</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>2001</td>
-              <td>1</td>
+              <td class="second-column">1</td>
               <td>Milan</td>
             </tr>
             <tr>
@@ -233,14 +266,16 @@
             </tr>
           </tbody>
         </table>
-        If you want to stay up to date about all his activities, you should
-        check out
-        <a
-          href="https://www.atptour.com/en/players/roger-federer/f324/overview"
-          id="tribute-link"
-          target="_blank"
-          >here</a
-        >.
+        <p>
+          If you want to stay up to date about all his activities, you should
+          check out
+          <a
+            href="https://www.atptour.com/en/players/roger-federer/f324/overview"
+            id="tribute-link"
+            target="_blank"
+            >here</a
+          >.
+        </p>
       </section>
       <hr />
       <footer class="footer">
