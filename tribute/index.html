@@ -14,14 +14,12 @@
       body {
         line-height: 1.5;
         font-family: "Roboto", sans-serif;
-        margin-left: 40px;
-        margin-right: 40px;
+        margin: 25px 40px;
         background-color: #ed90a6;
       }
 
       #tribute {
         text-align: center;
-        padding-top: 20px;
       }
 
       #title {
@@ -32,7 +30,7 @@
       #img-div {
         background-color: white;
         border-radius: 8px;
-        margin: 10px auto 30px;
+        margin: 15px auto 30px;
         max-width: 500px;
         padding: 5px;
       }
@@ -59,38 +57,36 @@
       }
 
       table {
-        background-color: rgb(53, 51, 51);
-        color: #ed90a6;
+        background-color: #4078b6;
+        color: white;
         margin: 30px auto;
-        border: 2px solid black;
         border-radius: 8px;
         padding: 10px;
         border-spacing: 0;
         text-align: justify;
-      }
-
-      @media (max-width: 500px) {
-        table {
-          font-size: 10px;
-        }
-        th {
-          width: 30px;
-        }
+        font-size: 15px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
       }
 
       th {
         text-align: left;
         border-bottom: 2px solid white;
-        width: 40px;
+        padding: 1px 20px 1px 0;
       }
 
       td {
+        border-bottom: 1px solid rgb(206, 200, 200);
         vertical-align: top;
-        padding: 1px;
+        padding: 1px 10px 1px 6px;
+      }
+
+      td:nth-child(2) {
+        text-align: center;
       }
 
       p {
         text-align: center;
+        margin-bottom: 30px;
       }
 
       .footer {
@@ -103,6 +99,24 @@
         color: #090d0e;
         font-weight: bold;
       }
+
+      hr {
+        border-top-color: rgba(58, 56, 55, 0.25);
+        border-bottom-color: #e2ded3;
+        width: 105px;
+      }
+
+      @media (max-width: 500px) {
+        table {
+          font-size: 12px;
+        }
+        th {
+          padding: 1px 5px 1px 0;
+        }
+        td {
+          padding: 1px 5px 1px 0;
+        }
+      }
     </style>
   </head>
   <body>
@@ -113,7 +127,7 @@
       <div id="img-div">
         <img
           id="image"
-          src="https://i.pinimg.com/originals/6e/f1/81/6ef1810e8bf09c8722b0e69bb2400bb6.jpg"
+          src="https://ullavs.nl/tribute/roger-federer.jpeg"
           alt="Roger Federer"
           width="500"
           height="500"
@@ -282,6 +296,7 @@
         Coded by
         <a href="https://ullavs.nl/" target="_blank">Ulla🆚</a>
       </footer>
+      <hr />
     </main>
   </body>
 </html>
