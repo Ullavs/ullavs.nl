@@ -5,39 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey Form</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap"
+      rel="stylesheet"
+    />
     <style>
       body {
-        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-          sans-serif;
-        background-color: orange;
+        font-family: "Poppins", sans-serif;
+        background-color: #264653;
+        color: white;
         line-height: 1.5;
         text-align: center;
+        font-size: 1rem;
+        margin: 16px;
+      }
+
+      ::placeholder {
+        font-family: "Poppins", sans-serif;
+      }
+
+      option {
+        font-family: "Poppins", sans-serif;
+      }
+
+      #description {
+        font-weight: bold;
+        font-style: italic;
+        text-decoration: none;
       }
 
       form {
-        background-color: rgb(185, 182, 175);
+        background-color: #e76f51;
         border-radius: 16px;
         padding: 30px;
-        max-width: 100%;
-        width: 750px;
-        margin: 0 auto;
+        margin: 20px auto 30px;
         text-align: left;
+        max-width: 600px;
       }
 
-      p {
+      p,
+      #name-label,
+      #email-label,
+      #number-label,
+      #amount-label,
+      #text-label {
         margin: 0;
+        text-decoration: underline;
       }
 
       .question {
-        padding: 20px;
+        padding: 10px 0;
+      }
+
+      .input-field {
+        border-radius: 4px;
+        border: 0;
+        padding: 4px 8px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
       }
 
       label {
         display: block;
       }
 
-      .options {
-        display: inline-block;
+      button {
+        font-size: 0.9rem;
+        padding: 4px 8px;
+        cursor: pointer;
+        margin: 10px 0;
+        width: 100px;
+        font-family: "Poppins", sans-serif;
+        background-color: #264653;
+        color: white;
+        border-radius: 4px;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);
+        transition: all 300ms ease-in-out;
+      }
+
+      button:hover {
+        background-color: white;
+        color: #e76f51;
+      }
+
+      .footer {
+        font-size: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+      }
+
+      hr {
+        border-top-color: rgba(58, 56, 55, 0.25);
+        border-bottom-color: #e2ded3;
+        width: 105px;
+      }
+
+      @media (max-width: 660px) {
+        body {
+          font-size: 0.8rem;
+        }
       }
     </style>
   </head>
@@ -46,7 +115,7 @@
 
     <p id="description">Thank you in advance for filling in this survey 🤗</p>
 
-    <form id="survey-form" action="https://ullavs.nl/thankyou" v method="POST">
+    <form id="survey-form" action="https://ullavs.nl/thankyou" method="POST">
       <div class="question">
         <label id="name-label" for="name">What is your name?</label>
         <input
@@ -54,6 +123,7 @@
           id="name"
           name="name"
           placeholder="Enter your name"
+          class="input-field"
           required
         />
       </div>
@@ -65,6 +135,7 @@
           id="email"
           name="email"
           placeholder="Enter your email adress"
+          class="input-field"
           required
         />
       </div>
@@ -77,17 +148,23 @@
           name="age"
           min="1"
           max="120"
-          placeholder="age"
+          placeholder="Age"
+          class="input-field"
           required
         />
       </div>
 
       <div class="question">
-        <label for="amount"
-          >What is the maximum amount you would like to pay on a monthly basis
+        <label for="amount" id="amount-label"
+          >What is the maximum amount you are willing to pay on a monthly basis
           for a streaming platform?</label
         >
-        <select id="dropdown" name="maximum-amount" required>
+        <select
+          id="dropdown"
+          name="maximum-amount"
+          class="input-field"
+          required
+        >
           <option disabled selected value>Please choose an option</option>
           <option value="only-free">I don't want to pay at all</option>
           <option value="less-than-€5>">Less than €5</option>
@@ -99,8 +176,7 @@
 
       <div class="question">
         <p>
-          What is the most most important factor in choosing a streaming
-          platform?
+          What is the most important factor in choosing a streaming platform?
         </p>
         <div class="options">
           <label for="price">
@@ -117,7 +193,7 @@
               value="interface"
               type="radio"
               name="most-important-factor"
-            />Interface
+            />Interface and user-friendliness
           </label>
           <label for="variety">
             <input
@@ -147,15 +223,7 @@
               value="amazon-prime"
               type="checkbox"
               name="platform"
-            />AmazonPrime</label
-          >
-          <label for="videoland">
-            <input
-              id="videoland"
-              value="videoland"
-              type="checkbox"
-              name="platform"
-            />Videoland</label
+            />Amazon Prime</label
           >
           <label for="disney+">
             <input
@@ -165,6 +233,14 @@
               name="platform"
             />Disney+</label
           >
+          <label for="apple-tv">
+            <input
+              id="apple-tv"
+              value="apple-tv"
+              type="checkbox"
+              name="platform"
+            />Apple TV+</label
+          >
           <label for="HBO">
             <input
               id="HBO"
@@ -172,6 +248,14 @@
               type="checkbox"
               name="platform"
             />HBO</label
+          >
+          <label for="videoland">
+            <input
+              id="videoland"
+              value="videoland"
+              type="checkbox"
+              name="platform"
+            />Videoland</label
           >
           <label for="ziggo">
             <input
@@ -182,20 +266,8 @@
             />Ziggo Movies & Series</label
           >
           <label for="npo">
-            <input
-              id="npo"
-              value="npo"
-              type="checkbox"
-              name="platform"
-            />NPO+</label
-          >
-          <label for="apple-tv">
-            <input
-              id="apple-tv"
-              value="apple-tv"
-              type="checkbox"
-              name="platform"
-            />Apple TV</label
+            <input id="npo" value="npo" type="checkbox" name="platform" />NPO
+            Plus</label
           >
           <label for="pathé">
             <input
@@ -225,13 +297,27 @@
       </div>
 
       <div class="question">
-        <label for="free-text"
+        <label for="free-text" id="text-label"
           >Do you have any additional comments about streaming platforms?</label
         >
-        <textarea id="free-text" name="text"></textarea>
+        <textarea
+          id="free-text"
+          name="text"
+          rows="5"
+          cols="55"
+          placeholder="Enter your comments here..."
+          class="input-field"
+        ></textarea>
       </div>
 
       <button type="submit" id="submit">Submit</button>
     </form>
+
+    <hr />
+    <footer class="footer">
+      Coded by
+      <a href="https://ullavs.nl/">Ulla🆚</a>
+    </footer>
+    <hr />
   </body>
 </html>
