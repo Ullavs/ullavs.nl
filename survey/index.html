@@ -7,105 +7,231 @@
     <title>Survey Form</title>
     <style>
       body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
         background-color: orange;
-        /* text-align: center; */
+        line-height: 1.5;
+        text-align: center;
       }
 
       form {
-        background-color: white;
-        /* border-radius: 16px;
-        padding: 10px;
-        width: 500px;
-        margin: 0 auto; */
+        background-color: rgb(185, 182, 175);
+        border-radius: 16px;
+        padding: 30px;
+        max-width: 100%;
+        width: 750px;
+        margin: 0 auto;
+        text-align: left;
       }
 
+      p {
+        margin: 0;
+      }
+
+      .question {
+        padding: 20px;
+      }
+
+      label {
+        display: block;
+      }
+
+      .options {
+        display: inline-block;
+      }
     </style>
   </head>
   <body>
-    <h1 id="title">💻 A survey form about streaming services 📽</h1>
+    <h1 id="title">💻 A survey form about streaming platforms 📽</h1>
 
-    <p id="description">Thank you for filling in this survey</p>
+    <p id="description">Thank you in advance for filling in this survey 🤗</p>
 
-    <form id="survey-form" action="https://ullavs.nl/thankyou">
-
+    <form id="survey-form" action="https://ullavs.nl/thankyou" v method="POST">
       <div class="question">
-        <p>What is your name?</p>
-        <input type="text" placeholder="Enter your name" id="name" required />
-      </div>
-
-      <div class="question">
-        <p>What is your email-adress?</p>
+        <label id="name-label" for="name">What is your name?</label>
         <input
-          type="email"
-          placeholder="Enter your email adress"
-          id="email"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
           required
         />
       </div>
 
       <div class="question">
-        <p>Please fill in your age</p>
+        <label id="email-label" for="email">What is your email adress?</label>
         <input
-        type="number"
-        placeholder="age"
-        id="number"
-        min="1"
-        max="99"
-        required
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email adress"
+          required
         />
-      <div>
+      </div>
 
-      <div class="question"> 
+      <div class="question">
+        <label id="number-label" for="number">Please fill in your age:</label>
+        <input
+          type="number"
+          id="number"
+          name="age"
+          min="1"
+          max="120"
+          placeholder="age"
+          required
+        />
+      </div>
+
+      <div class="question">
+        <label for="amount"
+          >What is the maximum amount you would like to pay on a monthly basis
+          for a streaming platform?</label
+        >
+        <select id="dropdown" name="maximum-amount" required>
+          <option disabled selected value>Please choose an option</option>
+          <option value="only-free">I don't want to pay at all</option>
+          <option value="less-than-€5>">Less than €5</option>
+          <option value="€5-€10">€5 - €10</option>
+          <option value="€10-€15">€10 - €15</option>
+          <option value="any-amount">Any amount</option>
+        </select>
+      </div>
+
+      <div class="question">
         <p>
-        What is the most most important factor in choosing a streaming platform?
+          What is the most most important factor in choosing a streaming
+          platform?
         </p>
-        <label for="price">
-          <input id="price" type="radio" name="most-important" />Price
+        <div class="options">
+          <label for="price">
+            <input
+              id="price"
+              value="price"
+              type="radio"
+              name="most-important-factor"
+            />Price
+          </label>
+          <label for="interface">
+            <input
+              id="interface"
+              value="interface"
+              type="radio"
+              name="most-important-factor"
+            />Interface
+          </label>
+          <label for="variety">
+            <input
+              id="variety"
+              value="variety"
+              type="radio"
+              name="most-important-factor"
+            />Variety of movies & series
+          </label>
+        </div>
+      </div>
+
+      <div class="question">
+        <p>Which platform(s) do you use?</p>
+        <div class="options">
+          <label for="netflix">
+            <input
+              id="netflix"
+              value="netflix"
+              type="checkbox"
+              name="platform"
+            />Netflix</label
+          >
+          <label for="amazon-prime">
+            <input
+              id="amazon-prime"
+              value="amazon-prime"
+              type="checkbox"
+              name="platform"
+            />AmazonPrime</label
+          >
+          <label for="videoland">
+            <input
+              id="videoland"
+              value="videoland"
+              type="checkbox"
+              name="platform"
+            />Videoland</label
+          >
+          <label for="disney+">
+            <input
+              id="disney+"
+              value="disney+"
+              type="checkbox"
+              name="platform"
+            />Disney+</label
+          >
+          <label for="HBO">
+            <input
+              id="HBO"
+              value="HBO"
+              type="checkbox"
+              name="platform"
+            />HBO</label
+          >
+          <label for="ziggo">
+            <input
+              id="ziggo"
+              value="ziggo"
+              type="checkbox"
+              name="platform"
+            />Ziggo Movies & Series</label
+          >
+          <label for="npo">
+            <input
+              id="npo"
+              value="npo"
+              type="checkbox"
+              name="platform"
+            />NPO+</label
+          >
+          <label for="apple-tv">
+            <input
+              id="apple-tv"
+              value="apple-tv"
+              type="checkbox"
+              name="platform"
+            />Apple TV</label
+          >
+          <label for="pathé">
+            <input
+              id="pathé"
+              value="pathé"
+              type="checkbox"
+              name="platform"
+            />Pathé thuis</label
+          >
+        </div>
+      </div>
+
+      <div class="question">
+        <p>Do you pay for every streaming platform you use?</p>
+        <label for="yes">
+          <input id="yes" value="yes" type="radio" name="do-you-pay" />Yes, I
+          pay for all the services myself.
         </label>
-        <label for="interface">
-          <input id="interface" type="radio" name="most-important" />Interface
+        <label for="no">
+          <input id="no" value="no" type="radio" name="do-you-pay" />No, I only
+          use my friends/families accounts.
         </label>
-        <label for="variety of movies & series">
-          <input
-          id="variety of movies & series"
-          type="radio"
-          name="most-important"
-          />variety of movies & series
+        <label for="some">
+          <input id="some" value="some" type="radio" name="do-you-pay" />A
+          combination of the above.
         </label>
       </div>
 
       <div class="question">
-        <p>Which platforms do you use?</p>
-        <label for="netflix"
-        > <input id="netflix" type="checkbox" name="platform" />Netflix</label
+        <label for="free-text"
+          >Do you have any additional comments about streaming platforms?</label
         >
-        <label for="amazon-prime"
-        > <input id="amazon-prime" type="checkbox" name="platform" />Amazon
-        Prime</label
-        >
-        <label for="videoland"
-        > <input
-          id="videoland"
-          type="checkbox"
-          name="platform"
-        />Videoland</label
-        >
-        <label for="disney+"
-        > <input id="disney+" type="checkbox" name="platform" />Disney+</label
-          >
-
-        <label for="HBO"
-        > <input id="HBO" type="checkbox" name="platform" />HBO</label
-          >
-
-        <label for="ziggo"
-        > <input id="ziggo" type="checkbox" name="platform" />Ziggo Movies &
-        Series</label
-          >
+        <textarea id="free-text" name="text"></textarea>
       </div>
 
-
-      <button type="submit">Submit</button>
+      <button type="submit" id="submit">Submit</button>
     </form>
   </body>
 </html>
