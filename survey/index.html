@@ -4,7 +4,108 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Survey Form</title>
+    <style>
+      body {
+        background-color: orange;
+        /* text-align: center; */
+      }
+
+      form {
+        background-color: white;
+        /* border-radius: 16px;
+        padding: 10px;
+        width: 500px;
+        margin: 0 auto; */
+      }
+
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1 id="title">💻 A survey form about streaming services 📽</h1>
+
+    <p id="description">Thank you for filling in this survey</p>
+
+    <form id="survey-form" action="https://ullavs.nl/thankyou">
+
+      <div class="question">
+        <p>What is your name?</p>
+        <input type="text" placeholder="Enter your name" id="name" required />
+      </div>
+
+      <div class="question">
+        <p>What is your email-adress?</p>
+        <input
+          type="email"
+          placeholder="Enter your email adress"
+          id="email"
+          required
+        />
+      </div>
+
+      <div class="question">
+        <p>Please fill in your age</p>
+        <input
+        type="number"
+        placeholder="age"
+        id="number"
+        min="1"
+        max="99"
+        required
+        />
+      <div>
+
+      <div class="question"> 
+        <p>
+        What is the most most important factor in choosing a streaming platform?
+        </p>
+        <label for="price">
+          <input id="price" type="radio" name="most-important" />Price
+        </label>
+        <label for="interface">
+          <input id="interface" type="radio" name="most-important" />Interface
+        </label>
+        <label for="variety of movies & series">
+          <input
+          id="variety of movies & series"
+          type="radio"
+          name="most-important"
+          />variety of movies & series
+        </label>
+      </div>
+
+      <div class="question">
+        <p>Which platforms do you use?</p>
+        <label for="netflix"
+        > <input id="netflix" type="checkbox" name="platform" />Netflix</label
+        >
+        <label for="amazon-prime"
+        > <input id="amazon-prime" type="checkbox" name="platform" />Amazon
+        Prime</label
+        >
+        <label for="videoland"
+        > <input
+          id="videoland"
+          type="checkbox"
+          name="platform"
+        />Videoland</label
+        >
+        <label for="disney+"
+        > <input id="disney+" type="checkbox" name="platform" />Disney+</label
+          >
+
+        <label for="HBO"
+        > <input id="HBO" type="checkbox" name="platform" />HBO</label
+          >
+
+        <label for="ziggo"
+        > <input id="ziggo" type="checkbox" name="platform" />Ziggo Movies &
+        Series</label
+          >
+      </div>
+
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
 </html>
