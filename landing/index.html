@@ -19,9 +19,50 @@
         background-color: #edf2f4;
         color: #ef233c;
         font-family: "Poppins", sans-serif;
+        line-height: 1.5;
+        margin: 0;
       }
-      header {
+
+      #nav-bar {
+        background-color: #d90429;
+        color: #edf2f4;
         position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 30%);
+      }
+
+      .header-dk {
+        font-size: 24px;
+        padding: 0 10px;
+      }
+
+      .links-header {
+        display: flex;
+        list-style-type: none;
+        padding: 0 10px;
+        margin: 0;
+        gap: 10px;
+      }
+
+      .nav-link {
+        color: #edf2f4;
+      }
+
+      header {
+        padding-top: 76px;
+        max-width: 100%;
+      }
+
+      #header-img {
+        width: 100%;
+        box-sizing: border-box;
+        border: 10px solid #2b2d42;
       }
 
       h1 {
@@ -30,13 +71,30 @@
     </style>
   </head>
   <body>
-    <header>
-      <div>Denmark 🇩🇰</div>
-      Cities Beaches Nature Lego Travel
-      <img src="https://ullavs.nl/landing/denmark.jpg" alt="Denmark" />
+    <header id="header">
+      <nav id="nav-bar">
+        <div class="header-dk">Denmark 🇩🇰</div>
+        <ul class="links-header">
+          <li><a class="nav-link" href="#">Cities</a></li>
+          <li><a class="nav-link" href="#">Beaches</a></li>
+          <li><a class="nav-link" href="#">Nature</a></li>
+          <li><a class="nav-link" href="#">Lego</a></li>
+          <li><a class="nav-link" href="#">Travel</a></li>
+          <li><a class="nav-link" href="#">Travel</a></li>
+        </ul>
+      </nav>
+      <img
+        id="header-img"
+        src="https://ullavs.nl/landing/denmark.jpg"
+        alt="Denmark"
+      />
     </header>
-    <h1>Why you should visit Denmark</h1>
 
+    <h1>Why you should visit Denmark</h1>
+    <br />
+    <br />
+    <br />
+    <br />
     <hr />
     <footer class="footer">
       Coded by
