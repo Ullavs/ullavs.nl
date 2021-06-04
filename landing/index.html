@@ -42,6 +42,10 @@
         padding: 0 10px;
       }
 
+      #header-img {
+        height: 24px;
+      }
+
       .links-header {
         display: flex;
         list-style-type: none;
@@ -59,47 +63,91 @@
         max-width: 100%;
       }
 
-      #header-img {
-        width: 100%;
-        box-sizing: border-box;
-        border: 10px solid #2b2d42;
+      .container {
+        display: grid;
+        min-height: 100vh;
+        grid-template-rows: auto 1fr auto;
       }
 
       h1 {
         text-align: center;
       }
+
+      .categories div {
+        height: 150px;
+        border-radius: 16px;
+        text-align: center;
+        color: black;
+      }
+      .cities {
+        background: LightSkyBlue;
+      }
+      .beaches {
+        background: LightSalmon;
+      }
+      .nature {
+        background: PaleTurquoise;
+      }
+      .lego {
+        background: LightPink;
+      }
+      .getting-there {
+        background: PaleGreen;
+      }
+      .covid-19 {
+        background: lightyellow;
+      }
+
+      .categories {
+        margin: 50px;
+        font-size: 25px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 16px;
+      }
     </style>
   </head>
   <body>
-    <header id="header">
-      <nav id="nav-bar">
-        <div class="header-dk">Denmark 🇩🇰</div>
-        <ul class="links-header">
-          <li><a class="nav-link" href="#">Cities</a></li>
-          <li><a class="nav-link" href="#">Beaches</a></li>
-          <li><a class="nav-link" href="#">Nature</a></li>
-          <li><a class="nav-link" href="#">Lego</a></li>
-          <li><a class="nav-link" href="#">Getting there</a></li>
-          <li><a class="nav-link" href="#">Covid-19</a></li>
-        </ul>
-      </nav>
-      <img
-        id="header-img"
-        src="https://ullavs.nl/landing/denmark.jpg"
-        alt="Denmark"
-      />
-    </header>
+    <div class="container">
+      <header id="header">
+        <nav id="nav-bar">
+          <div class="header-dk">
+            <img
+              id="header-img"
+              src="https://i.pinimg.com/originals/e0/a4/40/e0a440285262bbd76cf84b84bcc19a73.png"
+              alt="Denmark"
+            />
+            Denmark
+          </div>
+          <ul class="links-header">
+            <li><a class="nav-link" href="#">Cities</a></li>
+            <li><a class="nav-link" href="#">Beaches</a></li>
+            <li><a class="nav-link" href="#">Nature</a></li>
+            <li><a class="nav-link" href="#">Lego</a></li>
+            <li><a class="nav-link" href="#">Getting there</a></li>
+            <li><a class="nav-link" href="#">Covid-19</a></li>
+          </ul>
+        </nav>
+      </header>
 
-    <h1>Why you should visit Denmark</h1>
-    <br />
-    <br />
-    <br />
-    <br />
-    <hr />
-    <footer class="footer">
-      Coded by
-      <a href="https://ullavs.nl/">Ulla🆚</a>
-    </footer>
-    <hr />
+      <main>
+        <h1>Explore Denmark</h1>
+        <div class="categories">
+          <div class="cities">Cities</div>
+          <div class="beaches">Beaches</div>
+          <div class="nature">Nature</div>
+          <div class="lego">Lego</div>
+          <div class="getting-there">Getting there</div>
+          <div class="covid-19">Covid-19</div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <hr />
+        Coded by
+        <a href="https://ullavs.nl/">Ulla🆚</a>
+        <hr />
+      </footer>
+    </div>
   </body>
 </html>
