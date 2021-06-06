@@ -10,7 +10,7 @@
       rel="stylesheet"
     />
     <style>
-      /* colors: 003049 d62828 f77f00 fcbf49 eae2b7 
+      /* colors: 003049 d62828 f77f00 fcbf49 eae2b7
       d90429 ef233c edf2f4 8d99ae 2b2d42
       https://wallpaperaccess.com/denmark-nature
       */
@@ -24,15 +24,14 @@
       }
 
       body {
-        background-color: #edf2f4;
-        color: #ef233c;
+        background-color: #125c69;
+        color: #edf2f4;
         font-family: "Poppins", sans-serif;
         line-height: 1.5;
       }
 
       #nav-bar {
         background-color: #d90429;
-        color: #edf2f4;
         position: fixed;
         top: 0;
         left: 0;
@@ -44,10 +43,13 @@
         box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 30%);
       }
 
+      a {
+        color: #edf2f4;
+      }
+
       .logo-dk {
         font-size: 24px;
         text-decoration: none;
-        color: #edf2f4;
       }
 
       #header-img {
@@ -60,10 +62,6 @@
         display: flex;
         list-style-type: none;
         gap: 12px;
-      }
-
-      .nav-link {
-        color: #edf2f4;
       }
 
       header {
@@ -92,34 +90,60 @@
         height: 150px;
         border-radius: 16px;
         text-align: center;
-        color: #ef233c;
+        color: #d90429;
         font-weight: bold;
         display: grid;
         align-items: center;
+        /* transition: all 300ms ease-in-out; */
+      }
+
+      .categories div:hover {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-indent: -999999px;
       }
 
       .cities {
         background-color: #fec5bb;
       }
+      .cities:hover {
+        background-image: url("cities.png");
+      }
 
       .beaches {
         background-color: #fcd5ce;
+      }
+      .beaches:hover {
+        background-image: url("beaches.png");
       }
 
       .nature {
         background-color: #fae1dd;
       }
+      .nature:hover {
+        background-image: url("nature.png");
+      }
 
       .lego {
         background-color: #fae1dd;
+      }
+      .lego:hover {
+        background-image: url("lego.png");
       }
 
       .getting-there {
         background-color: #fcd5ce;
       }
+      .getting-there:hover {
+        background-image: url("getting-there.png");
+      }
 
       .covid-19 {
         background-color: #fec5bb;
+      }
+      .covid-19:hover {
+        background-image: url("covid-19.png");
       }
 
       .box-link {
@@ -141,19 +165,59 @@
       }
 
       h2 {
-        margin-bottom: 8px;
+        margin-bottom: 16px;
       }
 
       p {
-        margin-bottom: 8px;
+        margin-bottom: 16px;
       }
 
       .paragraphs {
-        background-color: #125c69;
+        background-color: #41a1b4;
         border-radius: 16px;
         padding: 16px;
         margin-bottom: 16px;
+        text-align: justify;
       }
+
+      @media (max-width: 767px) {
+        #nav-bar {
+          padding: 10px 5px;
+          display: block;
+        }
+
+        .logo-dk {
+          text-align: center;
+        }
+
+        .links-header {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          text-align: center;
+          grid-gap: 4px;
+          padding: 0;
+        }
+
+        header {
+          padding-top: 76px;
+          max-width: 100%;
+        }
+
+        h1 {
+          text-align: center;
+          padding-top: 32px;
+          font-size: 24px;
+        }
+        .categories {
+          margin: 16px;
+          padding-bottom: 8px;
+          font-size: 20px;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .main-text {
+        margin: 16px;
+              }
     </style>
   </head>
   <body>
