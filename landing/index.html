@@ -181,6 +181,10 @@
       }
 
       @media (max-width: 767px) {
+        * {
+          scroll-padding-top: 110px;
+        }
+
         #nav-bar {
           padding: 10px 5px;
           display: block;
@@ -196,11 +200,7 @@
           text-align: center;
           grid-gap: 4px;
           padding: 0;
-        }
-
-        header {
-          padding-top: 76px;
-          max-width: 100%;
+          font-size: 14px;
         }
 
         h1 {
@@ -208,6 +208,7 @@
           padding-top: 32px;
           font-size: 24px;
         }
+
         .categories {
           margin: 16px;
           padding-bottom: 8px;
@@ -216,8 +217,18 @@
         }
 
         .main-text {
-        margin: 16px;
-              }
+          margin: 16px;
+        }
+
+        .paragraphs {
+          padding: 8px;
+          margin-bottom: 8px;
+        }
+
+        h2 {
+          margin-bottom: 8px;
+        }
+      }
     </style>
   </head>
   <body>
