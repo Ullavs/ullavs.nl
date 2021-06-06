@@ -15,12 +15,19 @@
       https://wallpaperaccess.com/denmark-nature
       */
 
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        scroll-padding-top: 80px;
+      }
+
       body {
         background-color: #edf2f4;
         color: #ef233c;
         font-family: "Poppins", sans-serif;
         line-height: 1.5;
-        margin: 0;
       }
 
       #nav-bar {
@@ -30,28 +37,29 @@
         top: 0;
         left: 0;
         width: 100%;
-        padding: 20px 0;
+        padding: 20px 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 30%);
       }
 
-      .header-dk {
+      .logo-dk {
         font-size: 24px;
-        padding: 0 10px;
+        text-decoration: none;
+        color: #edf2f4;
       }
 
       #header-img {
         height: 24px;
+        position: relative;
+        top: 2px;
       }
 
       .links-header {
         display: flex;
         list-style-type: none;
-        padding: 0 10px;
-        margin: 0;
-        gap: 10px;
+        gap: 12px;
       }
 
       .nav-link {
@@ -69,41 +77,82 @@
         grid-template-rows: auto 1fr auto;
       }
 
+      main {
+        max-width: 1024px;
+        margin: 0 auto;
+      }
+
       h1 {
         text-align: center;
+        padding-top: 32px;
+        font-size: 48px;
       }
 
       .categories div {
         height: 150px;
         border-radius: 16px;
         text-align: center;
-        color: black;
+        color: #ef233c;
+        font-weight: bold;
+        display: grid;
+        align-items: center;
       }
+
       .cities {
-        background: LightSkyBlue;
+        background-color: #fec5bb;
       }
+
       .beaches {
-        background: LightSalmon;
+        background-color: #fcd5ce;
       }
+
       .nature {
-        background: PaleTurquoise;
+        background-color: #fae1dd;
       }
+
       .lego {
-        background: LightPink;
+        background-color: #fae1dd;
       }
+
       .getting-there {
-        background: PaleGreen;
+        background-color: #fcd5ce;
       }
+
       .covid-19 {
-        background: lightyellow;
+        background-color: #fec5bb;
+      }
+
+      .box-link {
+        text-decoration: none;
       }
 
       .categories {
-        margin: 50px;
+        margin: 32px;
+        padding-bottom: 16px;
         font-size: 25px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 16px;
+      }
+
+      .main-text {
+        margin: 32px;
+        color: #edf2f4;
+      }
+
+      h2 {
+        margin-bottom: 8px;
+      }
+
+      p {
+        margin-bottom: 8px;
+      }
+
+      .paragraphs {
+        background-color: #125c69;
+        border-radius: 16px;
+        padding: 16px;
+        margin-bottom: 16px;
       }
     </style>
   </head>
@@ -111,34 +160,289 @@
     <div class="container">
       <header id="header">
         <nav id="nav-bar">
-          <div class="header-dk">
-            <img
-              id="header-img"
-              src="https://i.pinimg.com/originals/e0/a4/40/e0a440285262bbd76cf84b84bcc19a73.png"
-              alt="Denmark"
-            />
-            Denmark
+          <div class="logo-dk">
+            <a class="logo-dk" href="#home">
+              <img
+                id="header-img"
+                src="https://i.pinimg.com/originals/e0/a4/40/e0a440285262bbd76cf84b84bcc19a73.png"
+                alt="Denmark"
+              />
+              Denmark
+            </a>
           </div>
           <ul class="links-header">
-            <li><a class="nav-link" href="#">Cities</a></li>
-            <li><a class="nav-link" href="#">Beaches</a></li>
-            <li><a class="nav-link" href="#">Nature</a></li>
-            <li><a class="nav-link" href="#">Lego</a></li>
-            <li><a class="nav-link" href="#">Getting there</a></li>
-            <li><a class="nav-link" href="#">Covid-19</a></li>
+            <li><a class="nav-link" href="#cities-text">Cities</a></li>
+            <li><a class="nav-link" href="#beaches-text">Beaches</a></li>
+            <li><a class="nav-link" href="#nature-text">Nature</a></li>
+            <li><a class="nav-link" href="#lego-text">LEGO</a></li>
+            <li>
+              <a class="nav-link" href="#getting-there-text">Getting there</a>
+            </li>
+            <li><a class="nav-link" href="#covid-19-text">Covid-19</a></li>
           </ul>
         </nav>
       </header>
 
       <main>
-        <h1>Explore Denmark</h1>
+        <h1 id="home">Explore Denmark</h1>
         <div class="categories">
-          <div class="cities">Cities</div>
-          <div class="beaches">Beaches</div>
-          <div class="nature">Nature</div>
-          <div class="lego">Lego</div>
-          <div class="getting-there">Getting there</div>
-          <div class="covid-19">Covid-19</div>
+          <a class="box-link" href="#cities-text"
+            ><div class="cities">Cities</div></a
+          >
+          <a class="box-link" href="#beaches-text"
+            ><div class="beaches">Beaches</div></a
+          >
+          <a class="box-link" href="#nature-text"
+            ><div class="nature">Nature</div></a
+          >
+          <a class="box-link" href="#lego-text"><div class="lego">LEGO</div></a>
+          <a class="box-link" href="#getting-there-text"
+            ><div class="getting-there">Getting there</div></a
+          >
+          <a class="box-link" href="#covid-19-text"
+            ><div class="covid-19">Covid-19</div></a
+          >
+        </div>
+        <div class="main-text">
+          <div class="paragraphs" id="cities-text">
+            <h2>Cities</h2>
+            <h4>Copenhagen</h4>
+            <p>
+              Copenhagen is Donec sed eros eu purus iaculis pretium a at nisl.
+              Vestibulum sit amet ante aliquet enim fringilla efficitur eget a
+              purus. Vestibulum tincidunt justo interdum, porta massa eu,
+              eleifend erat. Cras fringilla magna augue, in varius massa viverra
+              vitae. Ut ultrices libero in turpis cursus egestas. Curabitur
+              congue arcu vitae rutrum finibus. Suspendisse varius enim eget
+              tempus vehicula. Vivamus nec ante at sapien fringilla tincidunt
+              sed vel est. Nam sagittis magna justo. Aliquam lacinia sodales
+              mattis. Pellentesque lacinia efficitur facilisis. Morbi eget nisl
+              dui. Morbi at accumsan lorem. Duis leo lorem, auctor quis sapien
+              ac, consequat viverra diam. Proin pellentesque congue lectus at
+              lacinia.
+            </p>
+            <h4>Aarhus</h4>
+            <p>
+              Aarhus is Vestibulum ante ipsum primis in faucibus orci luctus et
+              ultrices posuere cubilia curae; Ut facilisis vel orci blandit
+              vehicula. Duis diam leo, rutrum et neque at, blandit faucibus
+              magna. Proin varius purus vel urna interdum malesuada. Nunc leo
+              odio, volutpat vel sem non, condimentum tempor nulla. Morbi
+              posuere tristique odio vel tincidunt. Donec ut urna sem. Nunc sit
+              amet velit tortor. Maecenas vel est molestie est finibus commodo
+              mattis eu tellus. Etiam ultricies nisl vitae lectus venenatis, sit
+              amet porta purus pulvinar. Integer suscipit arcu vel tincidunt
+              sodales.
+            </p>
+            <h4>Odense</h4>
+            <p>
+              Odense is Vestibulum ante ipsum primis in faucibus orci luctus et
+              ultrices posuere cubilia curae; Ut facilisis vel orci blandit
+              vehicula. Duis diam leo, rutrum et neque at, blandit faucibus
+              magna. Proin varius purus vel urna interdum malesuada. Nunc leo
+              odio, volutpat vel sem non, condimentum tempor nulla. Morbi
+              posuere tristique odio vel tincidunt. Donec ut urna sem. Nunc sit
+              amet velit tortor. Maecenas vel est molestie est finibus commodo
+              mattis eu tellus. Etiam ultricies nisl vitae lectus venenatis, sit
+              amet porta purus pulvinar. Integer suscipit arcu vel tincidunt
+              sodales.
+            </p>
+          </div>
+          <div class="paragraphs" id="beaches-text">
+            <h2>Beaches</h2>
+            <h4>Sondervig Beach</h4>
+            <p>
+              Sondervig is Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Sed eu iaculis dolor. Aenean sit amet magna at massa
+              vehicula pharetra a tincidunt arcu. Curabitur porttitor enim in
+              felis luctus, id finibus purus malesuada. Integer fermentum arcu
+              eleifend consectetur blandit. Duis libero diam, suscipit non
+              facilisis quis, pulvinar non dolor. Aliquam erat volutpat. Sed
+              volutpat commodo justo, vel convallis dolor mattis eget. Phasellus
+              ut erat non massa porta lobortis. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum
+              venenatis elit nec fermentum vestibulum.
+            </p>
+            <h4>Blavand Beach</h4>
+            <p>
+              Blavand is Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Sed eu iaculis dolor. Aenean sit amet magna at massa
+              vehicula pharetra a tincidunt arcu. Curabitur porttitor enim in
+              felis luctus, id finibus purus malesuada. Integer fermentum arcu
+              eleifend consectetur blandit. Duis libero diam, suscipit non
+              facilisis quis, pulvinar non dolor. Aliquam erat volutpat. Sed
+              volutpat commodo justo, vel convallis dolor mattis eget. Phasellus
+              ut erat non massa porta lobortis. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum
+              venenatis elit nec fermentum vestibulum.
+            </p>
+            <h4>Blokhus Beach</h4>
+            <p>
+              Blokhus is Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit. Sed eu iaculis dolor. Aenean sit amet magna at massa
+              vehicula pharetra a tincidunt arcu. Curabitur porttitor enim in
+              felis luctus, id finibus purus malesuada. Integer fermentum arcu
+              eleifend consectetur blandit. Duis libero diam, suscipit non
+              facilisis quis, pulvinar non dolor. Aliquam erat volutpat. Sed
+              volutpat commodo justo, vel convallis dolor mattis eget. Phasellus
+              ut erat non massa porta lobortis. Vestibulum ante ipsum primis in
+              faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum
+              venenatis elit nec fermentum vestibulum.
+            </p>
+          </div>
+          <div class="paragraphs" id="nature-text">
+            <h2>Nature</h2>
+            <h4>Thy National Park</h4>
+            <p>
+              Nunc eget arcu ut turpis mollis pellentesque. Cras et tristique
+              est. Maecenas sodales est in turpis porta, lacinia posuere justo
+              tempor. Nulla tincidunt neque ut quam tristique ornare. Aenean
+              interdum libero diam, ac fermentum metus tempus vel. Maecenas
+              vitae mattis sapien. Vestibulum eget eros enim. Mauris convallis
+              aliquet mi non aliquet. Aenean sed orci hendrerit nibh sodales
+              imperdiet. Nullam vel tellus a lacus maximus ornare ac quis dolor.
+              Nam a bibendum magna. Sed vel blandit lectus.
+            </p>
+            <h4>Wadden Sea</h4>
+            <p>
+              Nunc eget arcu ut turpis mollis pellentesque. Cras et tristique
+              est. Maecenas sodales est in turpis porta, lacinia posuere justo
+              tempor. Nulla tincidunt neque ut quam tristique ornare. Aenean
+              interdum libero diam, ac fermentum metus tempus vel. Maecenas
+              vitae mattis sapien. Vestibulum eget eros enim. Mauris convallis
+              aliquet mi non aliquet. Aenean sed orci hendrerit nibh sodales
+              imperdiet. Nullam vel tellus a lacus maximus ornare ac quis dolor.
+              Nam a bibendum magna. Sed vel blandit lectus.
+            </p>
+            <h4>Danish Desert</h4>
+            <p>
+              Nunc eget arcu ut turpis mollis pellentesque. Cras et tristique
+              est. Maecenas sodales est in turpis porta, lacinia posuere justo
+              tempor. Nulla tincidunt neque ut quam tristique ornare. Aenean
+              interdum libero diam, ac fermentum metus tempus vel. Maecenas
+              vitae mattis sapien. Vestibulum eget eros enim. Mauris convallis
+              aliquet mi non aliquet. Aenean sed orci hendrerit nibh sodales
+              imperdiet. Nullam vel tellus a lacus maximus ornare ac quis dolor.
+              Nam a bibendum magna. Sed vel blandit lectus.
+            </p>
+          </div>
+          <div class="paragraphs" id="lego-text">
+            <h2>LEGO</h2>
+            <h4>LEGOLAND</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
+              iaculis dolor. Aenean sit amet magna at massa vehicula pharetra a
+              tincidunt arcu. Curabitur porttitor enim in felis luctus, id
+              finibus purus malesuada. Integer fermentum arcu eleifend
+              consectetur blandit. Duis libero diam, suscipit non facilisis
+              quis, pulvinar non dolor. Aliquam erat volutpat. Sed volutpat
+              commodo justo, vel convallis dolor mattis eget. Phasellus ut erat
+              non massa porta lobortis. Vestibulum ante ipsum primis in faucibus
+              orci luctus et ultrices posuere cubilia curae; Vestibulum
+              venenatis elit nec fermentum vestibulum.
+            </p>
+            <h4>LEGO House</h4>
+            <p>
+              Nunc eget arcu ut turpis mollis pellentesque. Cras et tristique
+              est. Maecenas sodales est in turpis porta, lacinia posuere justo
+              tempor. Nulla tincidunt neque ut quam tristique ornare. Aenean
+              interdum libero diam, ac fermentum metus tempus vel. Maecenas
+              vitae mattis sapien. Vestibulum eget eros enim. Mauris convallis
+              aliquet mi non aliquet. Aenean sed orci hendrerit nibh sodales
+              imperdiet. Nullam vel tellus a lacus maximus ornare ac quis dolor.
+              Nam a bibendum magna. Sed vel blandit lectus.
+            </p>
+            <h4>LEGO Store</h4>
+            <p>
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia curae; Ut facilisis vel orci blandit vehicula.
+              Duis diam leo, rutrum et neque at, blandit faucibus magna. Proin
+              varius purus vel urna interdum malesuada. Nunc leo odio, volutpat
+              vel sem non, condimentum tempor nulla. Morbi posuere tristique
+              odio vel tincidunt. Donec ut urna sem. Nunc sit amet velit tortor.
+              Maecenas vel est molestie est finibus commodo mattis eu tellus.
+              Etiam ultricies nisl vitae lectus venenatis, sit amet porta purus
+              pulvinar. Integer suscipit arcu vel tincidunt sodales.
+            </p>
+          </div>
+          <div class="paragraphs" id="getting-there-text">
+            <h2>Getting there</h2>
+            <h4>By car</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
+              iaculis dolor. Aenean sit amet magna at massa vehicula pharetra a
+              tincidunt arcu. Curabitur porttitor enim in felis luctus, id
+              finibus purus malesuada. Integer fermentum arcu eleifend
+              consectetur blandit. Duis libero diam, suscipit non facilisis
+              quis, pulvinar non dolor. Aliquam erat volutpat. Sed volutpat
+              commodo justo, vel convallis dolor mattis eget. Phasellus ut erat
+              non massa porta lobortis. Vestibulum ante ipsum primis in faucibus
+              orci luctus et ultrices posuere cubilia curae; Vestibulum
+              venenatis elit nec fermentum vestibulum.
+            </p>
+            <h4>By plane</h4>
+            <p>
+              Nunc eget arcu ut turpis mollis pellentesque. Cras et tristique
+              est. Maecenas sodales est in turpis porta, lacinia posuere justo
+              tempor. Nulla tincidunt neque ut quam tristique ornare. Aenean
+              interdum libero diam, ac fermentum metus tempus vel. Maecenas
+              vitae mattis sapien. Vestibulum eget eros enim. Mauris convallis
+              aliquet mi non aliquet. Aenean sed orci hendrerit nibh sodales
+              imperdiet. Nullam vel tellus a lacus maximus ornare ac quis dolor.
+              Nam a bibendum magna. Sed vel blandit lectus.
+            </p>
+            <h4>By train</h4>
+            <p>
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia curae; Ut facilisis vel orci blandit vehicula.
+              Duis diam leo, rutrum et neque at, blandit faucibus magna. Proin
+              varius purus vel urna interdum malesuada. Nunc leo odio, volutpat
+              vel sem non, condimentum tempor nulla. Morbi posuere tristique
+              odio vel tincidunt. Donec ut urna sem. Nunc sit amet velit tortor.
+              Maecenas vel est molestie est finibus commodo mattis eu tellus.
+              Etiam ultricies nisl vitae lectus venenatis, sit amet porta purus
+              pulvinar. Integer suscipit arcu vel tincidunt sodales.
+            </p>
+          </div>
+          <div class="paragraphs" id="covid-19-text">
+            <h2>Covid-19</h2>
+            <h4>Travel restrictions</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu
+              iaculis dolor. Aenean sit amet magna at massa vehicula pharetra a
+              tincidunt arcu. Curabitur porttitor enim in felis luctus, id
+              finibus purus malesuada. Integer fermentum arcu eleifend
+              consectetur blandit. Duis libero diam, suscipit non facilisis
+              quis, pulvinar non dolor. Aliquam erat volutpat. Sed volutpat
+              commodo justo, vel convallis dolor mattis eget. Phasellus ut erat
+              non massa porta lobortis. Vestibulum ante ipsum primis in faucibus
+              orci luctus et ultrices posuere cubilia curae; Vestibulum
+              venenatis elit nec fermentum vestibulum.
+            </p>
+            <h4>Covid-19 test</h4>
+            <p>
+              Nunc eget arcu ut turpis mollis pellentesque. Cras et tristique
+              est. Maecenas sodales est in turpis porta, lacinia posuere justo
+              tempor. Nulla tincidunt neque ut quam tristique ornare. Aenean
+              interdum libero diam, ac fermentum metus tempus vel. Maecenas
+              vitae mattis sapien. Vestibulum eget eros enim. Mauris convallis
+              aliquet mi non aliquet. Aenean sed orci hendrerit nibh sodales
+              imperdiet. Nullam vel tellus a lacus maximus ornare ac quis dolor.
+              Nam a bibendum magna. Sed vel blandit lectus.
+            </p>
+            <h4>General rules</h4>
+            <p>
+              Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+              posuere cubilia curae; Ut facilisis vel orci blandit vehicula.
+              Duis diam leo, rutrum et neque at, blandit faucibus magna. Proin
+              varius purus vel urna interdum malesuada. Nunc leo odio, volutpat
+              vel sem non, condimentum tempor nulla. Morbi posuere tristique
+              odio vel tincidunt. Donec ut urna sem. Nunc sit amet velit tortor.
+              Maecenas vel est molestie est finibus commodo mattis eu tellus.
+              Etiam ultricies nisl vitae lectus venenatis, sit amet porta purus
+              pulvinar. Integer suscipit arcu vel tincidunt sodales.
+            </p>
+          </div>
         </div>
       </main>
 
