@@ -164,16 +164,21 @@
         margin-bottom: 16px;
       }
 
-      p {
-        margin-bottom: 16px;
+      h4 {
+        margin: 16px 0 8px 0;
       }
 
       .paragraphs {
         background-color: #41a1b4;
         border-radius: 16px;
-        padding: 16px;
+        padding: 24px 16px;
         margin-bottom: 16px;
         text-align: justify;
+      }
+
+      #denmark-map {
+        float: right;
+        margin: 10px 0 10px 15px;
       }
 
       footer {
@@ -235,13 +240,21 @@
         }
 
         .paragraphs {
-          padding: 8px;
+          padding: 16px 8px;
           margin-bottom: 8px;
         }
+
+        
 
         h2 {
           margin-bottom: 8px;
         }
+
+        #denmark-map {
+          float:none;
+          display: block;
+          margin: 0 auto;
+      }
 
         footer {
           font-size: 10px;
@@ -290,31 +303,40 @@
       <main>
         <h1 id="home">Explore Denmark</h1>
         <div class="categories">
-          <a class="box-link" href="#cities-text"
-            ><div class="cities">Cities</div></a
-          >
-          <a class="box-link" href="#beaches-text"
-            ><div class="beaches">Beaches</div></a
-          >
-          <a class="box-link" href="#nature-text"
-            ><div class="nature">Nature</div></a
-          >
+          <a class="box-link" href="#cities-text"><div class="cities">Cities</div></a>
+          <a class="box-link" href="#beaches-text"><div class="beaches">Beaches</div></a>
+          <a class="box-link" href="#nature-text"><div class="nature">Nature</div></a>
           <a class="box-link" href="#lego-text"><div class="lego">LEGO</div></a>
-          <a class="box-link" href="#getting-there-text"
-            ><div class="getting-there">Getting there</div></a
-          >
-          <a class="box-link" href="#covid-19-text"
-            ><div class="covid-19">Covid-19</div></a
-          >
+          <a class="box-link" href="#getting-there-text"><div class="getting-there">Getting there</div></a>
+          <a class="box-link" href="#covid-19-text"><div class="covid-19">Covid-19</div></a>
         </div>
         <div class="main-text">
           <div class="paragraphs" id="cities-text">
             <h2>Cities</h2>
             <h4>Copenhagen</h4>
             <p>
-              Copenhagen is Donec sed eros eu purus iaculis pretium a at nisl.
-              Vestibulum sit amet ante aliquet enim fringilla efficitur eget a
-              purus. Vestibulum tincidunt justo interdum, porta massa eu,
+              Copenhagen is the capital city of Denmark. It has a population of
+              around 800 thousand people. Copenhagen is situated on the eastern
+              coast of the island of Zealand.<img id="denmark-map" src="denmark-map.jpg"
+              alt="Map of Denmark" width="300" /> Whether you're looking for
+              elegant architecture, verdant parks or world-class museums,
+              Copenhagen has it all. 
+              <br>
+              The must-visit attractions in Copenhagen are:
+              <ul>
+                <li><strong>Copenhagen Zoo</strong>: Denmark's largest wildlife sanctuary;</li>
+                <li><strong>Tivoli Gardens</strong>: a famous amusement park, the second oldest in the world;</li>
+                <li><strong>Nyhavn</strong>: created between 1670 and 1675, Nyhavn is a 17th-century waterfront, canal and entertainment district in Copenhagen.</li>
+                <li><strong>The Little Mermaid</strong>: a bronze statue by Edvard Eriksen. Based on the 1837 fairy tale of the same name by Danish author Hans Christian Andersen; </li>
+                <li><strong>National Museum of Denmark</strong>: through informative exhibitions, you'll discover the city's past while learning about the events that shaped the country;</li>
+                <li><strong>The Black Diamond</strong>: a modern waterfront extension to the Royal Danish Library. The nickname is a reference to its polished black granite cladding and irregular angles;</li>
+                <li><strong>Amalienborg</strong>: the official residence of the Queen;</li>
+                <li><strong>Christiansborg</strong>: this used to be the main residence of the royal family, but these days it's the seat of the Danish parliament;</li>
+                <li><strong>Kastellet</strong>: the old citadel of Copenhagen, a well-preserved star-shaped fortress that is now a very pleasant public space</li>
+              </ul>
+              Donec sed eros eu purus iaculis pretium a
+              at nisl. Vestibulum sit amet ante aliquet enim fringilla efficitur
+              eget a purus. Vestibulum tincidunt justo interdum, porta massa eu,
               eleifend erat. Cras fringilla magna augue, in varius massa viverra
               vitae. Ut ultrices libero in turpis cursus egestas. Curabitur
               congue arcu vitae rutrum finibus. Suspendisse varius enim eget
