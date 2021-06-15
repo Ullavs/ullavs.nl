@@ -10,6 +10,12 @@
       rel="stylesheet"
     />
     <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
       body {
         background-color: orange;
         font-family: "Poppins", sans-serif;
@@ -18,6 +24,29 @@
 
       h1 {
         font-size: 2em;
+      }
+
+      code {
+        background-color: #eee;
+        padding: 0 3px;
+      }
+
+      pre code {
+        background-color: transparent;
+        padding: 0;
+      }
+
+      .code-blocks {
+        font-family: monospace;
+        background-color: crimson;
+        padding: 10px;
+        border-left: 10px solid black;
+      }
+
+      .important-note {
+        background-color: rgb(133, 175, 185);
+        border-left: 10px solid black;
+        padding: 10px;
       }
     </style>
   </head>
@@ -30,59 +59,214 @@
             This article will recap some of the CSS layout features we've
             already touched upon in previous modules — such as different display
             values — and introduce some of the concepts we'll be covering
-            throughout this module. <br />Prerequisites: The basics of HTML
-            (study Introduction to HTML), and an idea of How CSS works (study
-            Introduction to CSS.) <br />Objective: To give you an overview of
-            CSS page layout techniques. <br />Each technique can be learned in
-            greater detail in subsequent tutorials. CSS page layout techniques
-            allow us to take elements contained in a web page and control where
-            they are positioned relative to their default position in normal
-            layout flow, the other elements around them, their parent container,
-            or the main viewport/window. The page layout techniques we'll be
-            covering in more detail in this module are Normal flow The display
-            property Flexbox Grid Floats Positioning Table layout
-            Multiple-column layout Each technique has its uses, advantages, and
-            disadvantages, and no technique is designed to be used in isolation.
-            By understanding what each method is designed for you will be in a
-            good place to understand which is the best layout tool for each
-            task.
+            throughout this module.
+          </p>
+          <p>
+            Prerequisites: The basics of HTML (study
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML"
+              >Introduction to HTML</a
+            >), and an idea of How CSS works (study
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps"
+              >Introduction to CSS</a
+            >.) <br />Objective: To give you an overview of CSS page layout
+            techniques. Each technique can be learned in greater detail in
+            subsequent tutorials.
+          </p>
+          <p>
+            CSS page layout techniques allow us to take elements contained in a
+            web page and control where they are positioned relative to their
+            default position in normal layout flow, the other elements around
+            them, their parent container, or the main viewport/window. The page
+            layout techniques we'll be covering in more detail in this module
+            are
+          </p>
+          <ul>
+            <li>Normal flow</li>
+            <li>The display property</li>
+            <li>Flexbox Grid</li>
+            <li>Floats</li>
+            <li>Positioning</li>
+            <li>Table layout</li>
+            <li>Multiple-column layout</li>
+          </ul>
+          <p>
+            Each technique has its uses, advantages, and disadvantages, and no
+            technique is designed to be used in isolation. By understanding what
+            each method is designed for you will be in a good place to
+            understand which is the best layout tool for each task.
           </p>
         </article>
       </section>
       <section class="main-section" id="normal_flow">
         <header><h2>Normal flow</h2></header>
-        <article></article>
+        <article>
+          <p>
+            Normal flow is how the browser lays out HTML pages by default when
+            you do nothing to control page layout. Let's look at a quick HTML
+            example:
+          </p>
+          <pre class="code-blocks"><code>&lt;p&gt;I love my cat.&lt;/p&gt; 
+            
+&lt;ul&gt; 
+  &lt;li&gt;Buy catfood&lt;/li&gt; 
+  &lt;li&gt;Exercise&lt;/li&gt; 
+  &lt;li&gt;Cheer up friend&lt;/li&gt; 
+&lt;/ul&gt;
+
+&lt;p&gt;The end!&lt;/p&gt;</code></pre>
+          <p>By default, the browser will display this code as follows:</p>
+          <div class="code-blocks">
+            <p>I love my cat.</p>
+            <ul>
+              <li>Buy cat food</li>
+              <li>Exercise</li>
+              <li>Cheer up friend</li>
+            </ul>
+            <p>The end!</p>
+          </div>
+          <p>
+            Note here how the HTML is displayed in the exact order in which it
+            appears in the source code, with elements stacked up on top of one
+            another — the first paragraph, followed by the unordered list,
+            followed by the second paragraph.
+          </p>
+          <p>
+            The elements that appear one below the other are described as
+            <em>block</em> elements, in contrast to <em>inline</em> elements,
+            which appear one beside the other, like the individual words in a
+            paragraph.
+          </p>
+          <p class="important-note">
+            <strong>Note</strong>: The direction in which block element contents
+            are laid out is described as the Block Direction. The Block
+            Direction runs vertically in a language such as English, which has a
+            horizontal writing mode. It would run horizontally in any language
+            with a Vertical Writing Mode, such as Japanese. The corresponding
+            Inline Direction is the direction in which inline contents (such as
+            a sentence) would run.
+          </p>
+          <p>
+            For many of the elements on your page the normal flow will create
+            exactly the layout you need, however for more complex layouts you
+            will need to alter this default behavior using some of the tools
+            available to you in CSS. Starting with a well-structured HTML
+            document is very important, as you can then work with the way things
+            are laid out by default rather than fighting against it.
+          </p>
+          <p>
+            The methods that can change how elements are laid out in CSS are as
+            follows:
+          </p>
+          <ul>
+            <li>
+              <strong>The display property</strong> — Standard values such as
+              <code>block</code>, <code>inline</code> or
+              <code>inline-block</code> can change how elements behave in normal
+              flow, for example making a block-level element behave like an
+              inline element (see
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes"
+                >Types of CSS boxes</a
+              >
+              for more information). We also have entire layout methods that are
+              switched on via specific <code>display</code> values, for example
+              CSS Grid and Flexbox, which alter how elements inside the element
+              they are set on are laid out.
+            </li>
+            <li>
+              <strong>Floats</strong> — Applying a float value such as
+              <code>left</code> can cause block level elements to wrap alongside
+              one side of an element, like the way images sometimes have text
+              floating around them in magazine layouts.
+            </li>
+            <li>
+              <strong>The position property</strong> — Allows you to precisely
+              control the placement of boxes inside other boxes.
+              <code>static</code>
+              positioning is the default in normal flow, but you can cause
+              elements to be laid out differently using other values, for
+              example always fixed to the top of the browser viewport.
+            </li>
+            <li>
+              <strong>Table layout</strong> — features designed for styling the
+              parts of an HTML table can be used on non-table elements using
+              <code>display: table</code> and associated properties.
+            </li>
+            <li>
+              <strong>Multi-column layout</strong> — The Multi-column layout
+              properties can cause the content of a block to layout in columns,
+              as you might see in a newspaper.
+            </li>
+          </ul>
+        </article>
       </section>
       <section class="main-section" id="the_display_property">
         <header><h2>The display property</h2></header>
-        <article></article>
+        <article>
+          <p>
+            The main methods of achieving page layout in CSS are all values of
+            the <code>display</code> property. This property allows us to change
+            the default way something displays. Everything in normal flow has a
+            value of display, used as the default way that elements they are set
+            on behave. For example, the fact that paragraphs in English display
+            one below the other is due to the fact that they are styled with
+            <code>display: block</code>. If you create a link around some text
+            inside a paragraph, that link remains inline with the rest of the
+            text, and doesn’t break onto a new line. This is because the
+            <code>&lt;a&gt;</code> element is <code>display: inline</code> by
+            default.
+          </p>
+          <p>
+            You can change this default display behavior. For example, the
+            <code>&lt;li&gt;</code> element is <code>display: block</code> by
+            default, meaning that list items display one below the other in our
+            English document. If we change the display value to
+            <code>inline</code> they now display next to each other, as words
+            would do in a sentence. The fact that you can change the value of
+            <code>display</code> for any element means that you can pick HTML
+            elements for their semantic meaning, without being concerned about
+            how they will look. The way they look is something that you can
+            change.
+          </p>
+          <p>
+            In addition to being able to change the default presentation by
+            turning an item from <code>block</code> to <code>inline</code> and
+            vice versa, there are some bigger layout methods that start out as a
+            value of <code>display</code>. However, when using these, you will
+            generally need to invoke additional properties. The two values most
+            important for our purposes when discussing layout are
+            <code>display: flex</code> and <code>display: grid</code>.
+          </p>
+        </article>
       </section>
       <section class="main-section" id="flexbox">
         <header><h2>Flexbox</h2></header>
         <article></article>
       </section>
       <section class="main-section" id="grid_layout">
-        <header>Grid Layout</header>
+        <header><h2>Grid Layout</h2></header>
         <article></article>
       </section>
       <section class="main-section" id="floats">
-        <header>Floats</header>
+        <header><h2>Floats</h2></header>
         <article></article>
       </section>
       <section class="main-section" id="positioning_techniques">
-        <header>Positioning techniques</header>
+        <header><h2>Positioning techniques</h2></header>
         <article></article>
       </section>
       <section class="main-section" id="table_layout">
-        <header>Table layout</header>
+        <header><h2>Table layout</h2></header>
         <article></article>
       </section>
       <section class="main-section" id="multi-column_layout">
-        <header>Multi-column layout</header>
+        <header><h2>Multi-column layout</h2></header>
         <article></article>
       </section>
       <section class="main-section" id="summary">
-        <header>Summary</header>
+        <header><h2>Summary</h2></header>
         <article>
           <p>
             This article has provided a brief summary of all the layout
