@@ -53,7 +53,8 @@
       iframe {
         border-left: 10px solid black;
         background-color: #eee;
-        width: 500px;
+        width: 750px;
+        max-width: 100%;
       }
     </style>
   </head>
@@ -582,6 +583,36 @@ p {
             src="https://ullavs.nl/docs/example6.html"
             frameborder="0"
           ></iframe>
+          <h3>Relative positioning</h3>
+          <p>
+            Relative positioning allows you to offset an item from the position
+            in normal flow it would have by default. This means you could
+            achieve a task such as moving an icon down a bit so it lines up with
+            a text label. To do this, we could add the following rule to add
+            relative positioning:
+          </p>
+          <pre class="code-blocks"><code>.positioned {
+  position: relative;
+  top: 30px;
+  left: 30px;
+}</code></pre>
+          <p>
+            Here we give our middle paragraph a <code>position</code> value of
+            <code>relative</code> — this doesn't do anything on its own, so we
+            also add <code>top</code> and <code>left</code> properties. These
+            serve to move the affected element down and to the right — this
+            might seem like the opposite of what you were expecting, but you
+            need to think of it as the element being pushed on its left and top
+            sides, which result in it moving right and down.
+          </p>
+          <p>Adding this code will give the following result:</p>
+          <pre class="code-blocks"><code>.positioned {
+  position: relative;
+  background: rgba(255,84,104,.3);
+  border: 2px solid rgb(255,84,104);
+  top: 30px;
+  left: 30px;
+}</code></pre>
         </article>
       </section>
       <section class="main-section" id="table_layout">
