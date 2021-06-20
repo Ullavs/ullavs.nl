@@ -476,11 +476,113 @@
     height: 150px;
     margin-right: 30px;
 }</code></pre>
+          <iframe
+            src="https://ullavs.nl/docs/example5.html"
+            frameborder="0"
+          ></iframe>
+          <p class="important-note">
+            <strong>Note</strong>: Floats are fully explained in our lesson on
+            the
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats"
+              >float and clear</a
+            >
+            properties. Prior to techniques such as Flexbox and Grid Layout
+            floats were used as a method of creating column layouts. You may
+            still come across these methods on the web; we will cover these in
+            the lesson on
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods"
+              >legacy layout methods</a
+            >.
+          </p>
         </article>
       </section>
       <section class="main-section" id="positioning_techniques">
         <header><h2>Positioning techniques</h2></header>
-        <article></article>
+        <article>
+          <p>
+            Positioning allows you to move an element from where it would be
+            placed when in normal flow to another location. Positioning isn’t a
+            method for creating your main page layouts, it is more about
+            managing and fine-tuning the position of specific items on the page.
+          </p>
+          <p>
+            There are however useful techniques for certain layout patterns that
+            rely on the <code>position</code> property. Understanding
+            positioning also helps in understanding normal flow, and what it is
+            to move an item out of normal flow.
+          </p>
+          <p>There are five types of positioning you should know about:</p>
+          <ul>
+            <li>
+              <strong>Static positioning</strong> is the default that every
+              element gets — it just means "put the element into its normal
+              position in the document layout flow — nothing special to see
+              here".
+            </li>
+            <li>
+              <strong>Relative positioning</strong> allows you to modify an
+              element's position on the page, moving it relative to its position
+              in normal flow — including making it overlap other elements on the
+              page.
+            </li>
+            <li>
+              <strong>Absolute positioning</strong> moves an element completely
+              out of the page's normal layout flow, like it is sitting on its
+              own separate layer. From there, you can fix it in a position
+              relative to the edges of the page's &gt;html&lt; element (or its
+              nearest positioned ancestor element). This is useful for creating
+              complex layout effects such as tabbed boxes where different
+              content panels sit on top of one another and are shown and hidden
+              as desired, or information panels that sit off screen by default,
+              but can be made to slide on screen using a control button.
+            </li>
+            <li>
+              <strong>Fixed positioning</strong> is very similar to absolute
+              positioning, except that it fixes an element relative to the
+              browser viewport, not another element. This is useful for creating
+              effects such as a persistent navigation menu that always stays in
+              the same place on the screen as the rest of the content scrolls.
+            </li>
+            <li>
+              <strong>Sticky positioning</strong>is a newer positioning method
+              which makes an element act like
+              <code>position: static</code> until it hits a defined offset from
+              the viewport, at which point it acts like
+              <code>position: fixed</code>.
+            </li>
+          </ul>
+          <h3>Simple positioning example</h3>
+          <p>
+            To provide familiarity with these page layout techniques, we'll show
+            you a couple of quick examples. Our examples will all feature the
+            same HTML, which is as follows:
+          </p>
+          <pre class="code-blocks"><code>&lt;h1&gt;Positioning&lt;/h1&gt;
+
+&lt;p&gt;I am a basic block level element.&lt;/p&gt;
+&lt;p class="positioned"&gt;I am a basic block level element.&lt;/p&gt;
+&lt;p&gt;I am a basic block level element.&lt;/p&gt;</code></pre>
+          <p>This HTML will be styled by default using the following CSS:</p>
+          <pre class="code-blocks"><code>body {
+  width: 500px;
+  margin: 0 auto;
+}
+
+p {
+    background-color: rgb(207, 232, 220);
+    border: 2px solid rgb(79,185,227);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}</code></pre>
+          <p>The rendered output is as follows:</p>
+          <iframe
+            src="https://ullavs.nl/docs/example6.html"
+            frameborder="0"
+          ></iframe>
+        </article>
       </section>
       <section class="main-section" id="table_layout">
         <header><h2>Table layout</h2></header>
