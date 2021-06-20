@@ -34,6 +34,7 @@
       pre code {
         background-color: transparent;
         padding: 0;
+        white-space: pre-wrap;
       }
 
       .code-blocks {
@@ -53,8 +54,7 @@
       iframe {
         border-left: 10px solid black;
         background-color: #eee;
-        width: 750px;
-        max-width: 100%;
+        width: 100%;
       }
     </style>
   </head>
@@ -613,6 +613,42 @@ p {
   top: 30px;
   left: 30px;
 }</code></pre>
+          <iframe
+            src="https://ullavs.nl/docs/example7.html"
+            frameborder="0"
+          ></iframe>
+          <h3>Absolute positioning</h3>
+          <p>
+            Absolute positioning is used to completely remove an element from
+            normal flow, and place it using offsets from the edges of a
+            containing block.
+          </p>
+          <p>
+            Going back to our original non-positioned example, we could add the
+            following CSS rule to implement absolute positioning:
+          </p>
+          <pre class="code-blocks"><code>.positioned {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}</code></pre>
+          <p>
+            Here we give our middle paragraph a <code>position</code> value of
+            <code>absolute</code>, and the same <code>top</code> and
+            <code>left</code> properties as before. Adding this code, however,
+            will give the following result:
+          </p>
+          <pre class="code-blocks"><code>.positioned {
+    position: absolute;
+    background: rgba(255,84,104,.3);
+    border: 2px solid rgb(255,84,104);
+    top: 30px;
+    left: 30px;
+}</code></pre>
+          <iframe
+            src="https://ullavs.nl/docs/example8.html"
+            frameborder="0"
+          ></iframe>
         </article>
       </section>
       <section class="main-section" id="table_layout">
