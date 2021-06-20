@@ -649,6 +649,44 @@ p {
             src="https://ullavs.nl/docs/example8.html"
             frameborder="0"
           ></iframe>
+          <p>
+            This is very different! The positioned element has now been
+            completely separated from the rest of the page layout and sits over
+            the top of it. The other two paragraphs now sit together as if their
+            positioned sibling doesn't exist. The <code>top</code> and
+            <code>left</code> properties have a different effect on absolutely
+            positioned elements than they do on relatively positioned elements.
+            In this case the offsets have been calculated from the top and left
+            of the page. It is possible to change the parent element that
+            becomes this container and we will take a look at that in the lesson
+            on positioning.
+          </p>
+          <h3>Fixed positioning</h3>
+          <p>
+            Fixed positioning removes our element from document flow in the same
+            way as absolute positioning. However, instead of the offsets being
+            applied from the container, they are applied from the viewport. As
+            the item remains fixed in relation to the viewport we can create
+            effects such as a menu which remains fixed as the page scrolls
+            beneath it.
+          </p>
+          <p>
+            For this example our HTML is three paragraphs of text, in order that
+            we can cause the page to scroll, and a box to which we will give
+            <code>position: fixed</code>.
+          </p>
+          <pre class="code-blocks"><code>&lt;h1&gt;Fixed positioning&lt;/h1&gt;
+
+&lt;div class="positioned"&gt;Fixed&lt;/div&gt;
+
+&lt;p&gt;Paragraph 1.&lt;/p&gt;
+&lt;p&gt;Paragraph 2.&lt;/p&gt;
+&lt;p&gt;Paragraph 3.&lt;/p&gt;</code></pre>
+          <pre class="code-blocks"><code>.positioned {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+}</code></pre>
         </article>
       </section>
       <section class="main-section" id="table_layout">
