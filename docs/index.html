@@ -825,11 +825,64 @@ form p {
             src="https://ullavs.nl/docs/example11.html"
             frameborder="0"
           ></iframe>
+          <p>
+            You can also see this example live at
+            <a
+              href="https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html"
+              >css-tables-example.html</a
+            >
+            (see the
+            <a
+              href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html"
+              >source code</a
+            >
+            too.)
+          </p>
         </article>
       </section>
       <section class="main-section" id="multi-column_layout">
         <header><h2>Multi-column layout</h2></header>
-        <article></article>
+        <article>
+          <p>
+            The multi-column layout module gives us a way to lay out content in
+            columns, similar to how text flows in a newspaper. While reading up
+            and down columns is less useful in a web context as you don’t want
+            to force users to scroll up and down, arranging content into columns
+            can be a useful technique.
+          </p>
+          <p>
+            To turn a block into a multicol container we use either the
+            <code>column-count</code> property, which tells the browser how many
+            columns we would like to have, or the
+            <code>column-width</code> property, which tells the browser to fill
+            the container with as many columns of at least that width.
+          </p>
+          <p>
+            In the below example we start with a block of HTML inside a
+            containing <code>&lt;div&gt;</code> element with a class of
+            <code>container</code>.
+          </p>
+          <pre class="code-blocks"><code>&lt;div class="container&gt;
+    &lt;h1&gt;Multi-column layout&lt;/h1&gt;
+
+    &lt;p&gt;Paragraph 1.&lt;/p&gt;
+    &lt;p&gt;Paragraph 2.&lt;/p&gt;
+
+&lt;/div&gt;</code></pre>
+          <p>
+            We are using a <code>column-width</code> of 200 pixels on that
+            container, causing the browser to create as many 200-pixel columns
+            as will fit in the container and then share the remaining space
+            between the created columns.
+          </p>
+          <pre class="code-blocks"><code>.container {
+    column-width: 200px;
+}</code></pre>
+          <iframe
+            src="https://ullavs.nl/docs/example12.html"
+            frameborder="0"
+          ></iframe>
+        </article>
       </section>
       <section class="main-section" id="summary">
         <header><h2>Summary</h2></header>
