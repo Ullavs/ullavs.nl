@@ -42,17 +42,17 @@
         background-color: crimson;
         color: rgb(212, 209, 209);
         padding: 10px;
-        border-left: 10px solid black;
+        border-left: 5px solid black;
       }
 
       .important-note {
         background-color: rgb(133, 175, 185);
-        border-left: 10px solid black;
+        border-left: 5px solid black;
         padding: 10px;
       }
 
       iframe {
-        border-left: 10px solid black;
+        border-left: 5px solid black;
         background-color: #eee;
         width: 100%;
       }
@@ -709,11 +709,123 @@ p {
             src="https://ullavs.nl/docs/example10.html"
             frameborder="0"
           ></iframe>
+          <p class="important-note">
+            <strong>Note</strong>: to find more out about positioning, see our
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning"
+              >Positioning</a
+            >
+            article.
+          </p>
         </article>
       </section>
       <section class="main-section" id="table_layout">
         <header><h2>Table layout</h2></header>
-        <article></article>
+        <article>
+          <p>
+            HTML tables are fine for displaying tabular data, but many years ago
+            — before even basic CSS was supported reliably across browsers — web
+            developers used to also use tables for entire web page layouts —
+            putting their headers, footers, different columns, etc. in various
+            table rows and columns. This worked at the time, but it has many
+            problems — table layouts are inflexible, very heavy on markup,
+            difficult to debug, and semantically wrong (e.g., screen reader
+            users have problems navigating table layouts).
+          </p>
+          <p>
+            The way that a table looks on a webpage when you use table markup is
+            due to a set of CSS properties that define table layout. These
+            properties can be used to lay out elements that are not tables, a
+            use which is sometimes described as "using CSS tables".
+          </p>
+          <p>
+            The example below shows one such use; using CSS tables for layout
+            should be considered a legacy method at this point, for those
+            situations where you have very old browsers without support for
+            Flexbox or Grid.
+          </p>
+          <p>
+            Let's look at an example. First, some simple markup that creates an
+            HTML form. Each input element has a label, and we've also included a
+            caption inside a paragraph. Each label/input pair is wrapped in a
+            &lt;div&gt;, for layout purposes.
+          </p>
+          <pre class="code-blocks"><code>&ltForm&gt;
+  &lt;p&gt;First of all, tell us your name and age.&lt;/p&gt;
+  &lt;div&gt;
+    &lt;label for="fname"&gt;First name:&lt;/label&gt;
+    &lt;input type="text" id="fname"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="lname"&gt;Last name:&lt;/label&gt;
+    &lt;input type="text" id="lname"&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;label for="age"&gt;Age:&lt;/label&gt;
+    &lt;input type="text" id="age"&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
+          <p>
+            Now, the CSS for our example. Most of the CSS is fairly ordinary,
+            except for the uses of the <code>display</code> property. The
+            <code> &lt;form&gt;</code>, <code>&lt;div&gt;</code>s, and
+            <code>&lt;label&gt;</code>s and <code>&lt;input&gt;</code>s have
+            been told to display like a table, table rows, and table cells
+            respectively — basically, they'll act like HTML table markup,
+            causing the labels and inputs to line up nicely by default. All we
+            then have to do is add a bit of sizing, margin, etc. to make
+            everything look a bit nicer and we're done.
+          </p>
+          <p>
+            You'll notice that the caption paragraph has been given
+            <code>display: table-caption</code>; — which makes it act like a
+            table <code>&lt;caption&gt;</code> — and
+            <code>caption-side: bottom</code>; to tell the caption to sit on the
+            bottom of the table for styling purposes, even though the markup is
+            before the <code>&lt;input&gt;</code> elements in the source. This
+            allows for a nice bit of flexibility.
+          </p>
+          <pre class="code-blocks"><code>html {
+  font-family: sans-serif;
+}
+
+form {
+  display: table;
+  margin: 0 auto;
+}
+
+form div {
+  display: table-row;
+}
+
+form label, form input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+form label {
+  width: 200px;
+  padding-right: 5%;
+  text-align: right;
+}
+
+form input {
+  width: 300px;
+}
+
+form p {
+  display: table-caption;
+  caption-side: bottom;
+  width: 300px;
+  color: #999;
+  font-style: italic;
+}</code></pre>
+          <p>This gives us the following result:</p>
+          <iframe
+            src="https://ullavs.nl/docs/example11.html"
+            frameborder="0"
+          ></iframe>
+        </article>
       </section>
       <section class="main-section" id="multi-column_layout">
         <header><h2>Multi-column layout</h2></header>
