@@ -17,13 +17,58 @@
       }
 
       body {
-        background-color: orange;
+        background-color: rgba(220, 20, 60, 0.04);
         font-family: "Poppins", sans-serif;
         line-height: 1.5;
+        margin: 0;
+      }
+
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100%;
+        border-right: 5px solid black;
+      }
+
+      #navbar header {
+        font-size: 2em;
+        padding: 15px 15px;
+      }
+
+      #navbar ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      #navbar li {
+        border-top: 1px solid;
+        border-width: 100%;
+        padding: 10px 15px;
+        list-style: none;
+        position: relative;
+        width: 100%;
+      }
+
+      #main-doc {
+        position: absolute;
+        margin-left: 300px;
+        margin-right: 20px;
       }
 
       h1 {
         font-size: 2em;
+        margin-top: 15px;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+
+      main a {
+        text-decoration: underline;
       }
 
       code {
@@ -46,7 +91,7 @@
       }
 
       .important-note {
-        background-color: rgb(133, 175, 185);
+        background-color: rgb(90, 203, 230);
         border-left: 5px solid black;
         padding: 10px;
       }
@@ -59,6 +104,37 @@
     </style>
   </head>
   <body>
+    <nav id="navbar">
+      <header>CSS layout</header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#introduction_to_css_layout"
+            >Introduction to CSS layout</a
+          >
+        </li>
+        <li><a class="nav-link" href="#normal_flow">Normal flow</a></li>
+        <li>
+          <a class="nav-link" href="#the_display_property"
+            >The display property</a
+          >
+        </li>
+        <li><a class="nav-link" href="#flexbox">Flexbox</a></li>
+        <li><a class="nav-link" href="#grid_layout">Grid layout</a></li>
+        <li><a class="nav-link" href="#floats">Floats</a></li>
+        <li>
+          <a class="nav-link" href="#positioning_techniques"
+            >Positioning techniques</a
+          >
+        </li>
+        <li><a class="nav-link" href="#table_layout">Table layout</a></li>
+        <li>
+          <a class="nav-link" href="#multi-column_layout"
+            >Multi-column layout</a
+          >
+        </li>
+        <li><a class="nav-link" href="#summary">Summary</a></li>
+      </ul>
+    </nav>
     <main id="main-doc">
       <section class="main-section" id="introduction_to_css_layout">
         <header><h1>Introduction to CSS layout</h1></header>
