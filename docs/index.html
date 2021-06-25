@@ -76,6 +76,10 @@
         text-decoration: none;
       }
 
+      #main-doc .footer {
+        display: none;
+      }
+
       #main-doc {
         position: absolute;
         margin-left: 300px;
@@ -162,11 +166,62 @@
 
         #main-doc {
           margin-left: 860px;
-          max-width: 85ch;
         }
       }
 
-      /* @media (max-width: ); */
+      @media (max-width: 768px) {
+        #navbar {
+          position: absolute;
+          top: 0;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          max-height: 275px;
+          border-right: none;
+          border-bottom: 2px solid black;
+        }
+        #main-doc {
+          position: relative;
+          margin: 300px 20px 20px 20px;
+        }
+
+        .code-blocks {
+          max-width: 100%;
+        }
+
+        iframe {
+          max-width: 100%;
+        }
+
+        #navbar .footer {
+          display: none;
+        }
+
+        #main-doc .footer {
+          display: block;
+          margin: 20px auto 30px;
+          width: 108px;
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #navbar header {
+          font-size: 1.5em;
+        }
+
+        h1 {
+          font-size: 1.5em;
+        }
+
+        #navbar li a {
+          font-size: 0.9em;
+        }
+
+        #main-doc {
+          font-size: 0.9em;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1049,6 +1104,10 @@ form p {
           </p>
         </article>
       </section>
+      <footer class="footer">
+        Coded by
+        <a href="https://ullavs.nl/" id="ullavs-ref">Ulla🆚</a>
+      </footer>
     </main>
   </body>
 </html>
