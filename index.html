@@ -16,7 +16,7 @@
       *::after {
         box-sizing: border-box;
         margin: 0;
-        scroll-padding-top: 65px;
+        scroll-padding-top: 75px;
         scroll-behavior: smooth;
       }
 
@@ -39,12 +39,22 @@
         box-shadow: 0px 3px 8px 0px rgb(0 0 0 / 30%);
       }
 
+      .logo {
+        font-weight: bold;
+      }
+
       .links-header {
         display: flex;
         list-style-type: none;
         gap: 40px;
         margin: 0;
         padding: 0;
+      }
+
+      #navbar a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 24px;
       }
 
       h1 {
@@ -61,6 +71,12 @@
         justify-content: center;
       }
 
+      .about-me-section {
+        width: 100%;
+        min-height: 100vh;
+        text-align: center;
+      }
+
       .projects-section {
         width: 100%;
         min-height: 100vh;
@@ -74,9 +90,10 @@
     <header class="header">
       <nav id="navbar">
         <div class="logo">
-          <a href="#" class="logo-home">Ulla🆚</a>
+          <a href="#" class="logo">Ulla🆚</a>
         </div>
         <ul class="links-header">
+          <li><a class="nav-link" href="#about-me">About me</a></li>
           <li><a class="nav-link" href="#projects">Projects</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -84,11 +101,15 @@
     </header>
 
     <main>
-      <section id="welcome-section">
-        <div class="welcome-page">
+      <section id="welcome-section" class="cover">
+        <div class="cover">
           <h1>Hi, I am Ulla🆚</h1>
           <p><em>front-end developer in the making</em></p>
         </div>
+      </section>
+
+      <section id="about-me" class="about-me-section">
+        <h2>About me</h2>
       </section>
 
       <section id="projects" class="projects-section">
