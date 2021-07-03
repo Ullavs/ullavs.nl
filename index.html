@@ -21,7 +21,7 @@
       }
 
       body {
-        background-color: #219ebc1a;
+        /* background-color: #e8f5f8; */
         color: #011e2c;
         font-family: "Poppins", sans-serif;
       }
@@ -64,7 +64,7 @@
       }
 
       .nav-link:hover {
-        background-color: #219ebc;
+        background-color: #b2ccce;
         border-radius: 6px;
       }
 
@@ -72,22 +72,29 @@
         font-size: 80px;
       }
 
-      #welcome-section {
+      #about-me,
+      #projects,
+      #contact,
+      #welcome {
         width: 100%;
-        height: 100vh;
-        background-color: #219ebc;
+        min-height: 100vh;
         text-align: center;
+      }
+
+      #welcome {
+        background-color: #219ebc;
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
-      #about-me,
-      #projects,
-      #contact {
-        width: 100%;
-        min-height: 100vh;
-        text-align: center;
+      #about-me {
+        /* background-color: #fef0e0; */
+        background-color: #fff3e5;
+      }
+
+      #projects {
+        background-color: #e8f5f8;
       }
 
       #projects h2,
@@ -110,7 +117,7 @@
       .projects-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         grid-gap: 30px;
         max-width: 1000px;
         margin: 0 auto;
@@ -122,9 +129,21 @@
         padding: 16px;
       }
 
+      .projects-grid .project-tile-6 {
+        background-color: #e8f5f8;
+        display: grid;
+        align-items: center;
+        transition: all 300ms ease-in-out;
+      }
+
+      .project-tile-6:hover {
+        background-color: #b2ccce;
+      }
+
       .projects-grid a {
         text-decoration: none;
         color: inherit;
+        font-size: 18px;
       }
 
       .projects-grid img {
@@ -132,6 +151,19 @@
         height: auto;
       }
 
+      .contact-section {
+        display: flex;
+        background-color: #eaeadf;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .contact-links {
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+      }
       /* fb8500 ffb703 023047 219ebc 8ecae6 */
     </style>
   </head>
@@ -153,7 +185,7 @@
     </header>
 
     <main>
-      <section id="welcome-section" class="cover">
+      <section id="welcome" class="cover">
         <div class="cover">
           <h1>Hi, I am Ulla🆚</h1>
           <p><em>front-end developer in the making</em></p>
@@ -164,17 +196,18 @@
         <h2>About me</h2>
         <div class="about-me-content">
           <p class="paragraph-1">
-            <img src="random-image.jpeg" width="300" height="200" />Hi, I am
-            Ulla🆚. I was born in Breda and I am now living in Amsterdam. I have
-            multiple years of working experience as a medical doctor. However,
-            because I am really attracted to the tech world, I decided to learn
-            some new stuff. So right now I am studying front-end development
-            through different online courses. My goal is to be able to combine
-            my medical knowledge with my newly acquired development skills in a
+            <img src="random-image.jpeg" width="300" height="200" />
+            Hi, I am Ulla🆚. I was born in Breda and I am now living in
+            Amsterdam. I have multiple years of working experience as a medical
+            doctor. However, because I am really attracted to the tech world, I
+            decided to learn some new stuff. So right now I am studying
+            front-end development through different online courses. You can
+            check out my projects below. My goal is to be able to combine my
+            medical knowledge with my newly acquired development skills in a
             professional way.
           </p>
           <p class="paragraph-2">
-            People describe me as an reliable, precise and critical team player.
+            People describe me as a reliable, precise and critical team player.
             I would say I am eager to learn, enthusiastic and sincere. I love
             speed cubing, watching Netflix, playing video and board games,
             listening to podcasts, playing tennis, watching all kind of sports
@@ -231,19 +264,50 @@
                 height="200"
               />
               <p class="project-tile">
-                <strong>Technical Documentation Page</strong>
+                <strong>Technical documentation page</strong>
               </p>
               <p>using HTML & CSS</p>
             </a>
+          </div>
+
+          <div class="project-tile-6">
+            <p class="project-tile">
+              <strong>Soon more to come...</strong>
+            </p>
           </div>
         </div>
       </section>
 
       <section id="contact" class="contact-section">
-        <h2>Contact</h2>
+        <div>
+          <h1>Sparked your interest?</h1>
+          <h1>Let's connect!</h1>
+        </div>
+        <div class="contact-links">
+          <span
+            ><a href="https://github.com/Ullavs"
+              ><img
+                src="GitHub-Mark-32px.png"
+                width="32"
+                height="32"
+              />Github</a
+            ></span
+          >
+          <span
+            ><a href="https://codepen.io/Ullafvs"
+              ><img src="codepen.png" width="32" height="32" />Codepen</a
+            ></span
+          >
+
+          <span
+            ><a href="https://www.linkedin.com/in/ullavansprang/"
+              ><img src="linkedin.png" width="32" height="32" />LinkedIn</a
+            ></span
+          >
+        </div>
       </section>
     </main>
 
-    <footer>Footer</footer>
+    <!-- <footer>Footer</footer> -->
   </body>
 </html>
