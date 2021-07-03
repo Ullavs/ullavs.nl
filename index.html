@@ -97,10 +97,9 @@
       }
 
       .about-me-content {
-        max-width: 85ch;
+        max-width: 75ch;
         text-align: justify;
         margin: 0 auto;
-        padding: 0 50px;
       }
 
       .about-me-content img {
@@ -111,13 +110,26 @@
       .projects-grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 150px;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
       }
 
-      .project-tile {
-        background-color: rgb(0 0 0 / 30%);
+      .projects-grid div {
+        background-color: #b2ccce;
         border-radius: 8px;
+        padding: 16px;
+      }
+
+      .projects-grid a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .projects-grid img {
+        max-width: 100%;
+        height: auto;
       }
 
       /* fb8500 ffb703 023047 219ebc 8ecae6 */
@@ -152,30 +164,25 @@
         <h2>About me</h2>
         <div class="about-me-content">
           <p class="paragraph-1">
-            <img src="random-image.jpeg" width="300" height="200" />Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat. Duis aute irure dolor in reprehenderit in
-            voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
+            <img src="random-image.jpeg" width="300" height="200" />Hi, I am
+            Ulla🆚. I was born in Breda and I am now living in Amsterdam. I have
+            multiple years of working experience as a medical doctor. However,
+            because I am really attracted to the tech world, I decided to learn
+            some new stuff. So right now I am studying front-end development
+            through different online courses. My goal is to be able to combine
+            my medical knowledge with my newly acquired development skills in a
+            professional way.
           </p>
           <p class="paragraph-2">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore
-            magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
-            nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
-            aliquid ex ea commodi consequatur? Quis autem vel eum iure
-            reprehenderit qui in ea voluptate velit esse quam nihil molestiae
-            consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
-            pariatur?
+            People describe me as an reliable, precise and critical team player.
+            I would say I am eager to learn, enthusiastic and sincere. I love
+            speed cubing, watching Netflix, playing video and board games,
+            listening to podcasts, playing tennis, watching all kind of sports
+            and travelling!
+          </p>
+          <p>
+            PS. In case you wondered, 🆚 stands for my surname and orange is my
+            favourite color.
           </p>
         </div>
       </section>
@@ -184,47 +191,48 @@
         <h2>Projects I made during my coding journey</h2>
 
         <div class="projects-grid">
-          <div class="project-tile">
+          <div class="project-tile-1">
             <a href="https://ullavs.nl/cocktails/">
-              <img />
-              <p class="project-tile">Landing page</p>
-              <p>via SheCodes</p>
-              <p>using HTML, CSS & javascript</p>
+              <img src="landing-page-cocktails.PNG" width="300" height="200" />
+              <p class="project-tile"><strong>Landing page</strong></p>
+              <p>using HTML, CSS & JavaScript</p>
             </a>
           </div>
 
-          <div class="project-tile">
+          <div class="project-tile-2">
             <a href="https://ullavs.nl/tribute/">
-              <img />
-              <p class="project-tile">Tribute page</p>
-              <p>via freeCodeCamp</p>
+              <img src="tribute-page-federer.png" width="300" height="200" />
+              <p class="project-tile"><strong>Tribute page</strong></p>
               <p>using HTML & CSS</p>
             </a>
           </div>
 
-          <div class="project-tile">
+          <div class="project-tile-3">
             <a href="https://ullavs.nl/survey/">
-              <img />
-              <p class="project-tile">Survey</p>
-              <p>via freeCodeCamp</p>
+              <img src="survey.png" width="300" height="200" />
+              <p class="project-tile"><strong>Survey</strong></p>
               <p>using HTML & CSS</p>
             </a>
           </div>
 
-          <div class="project-tile">
+          <div class="project-tile-4">
             <a href="https://ullavs.nl/landing/">
-              <img />
-              <p class="project-tile">Landing page</p>
-              <p>via freeCodeCamp</p>
+              <img src="landing-page-denmark.png" width="300" height="200" />
+              <p class="project-tile"><strong>Landing page</strong></p>
               <p>using HTML & CSS</p>
             </a>
           </div>
 
-          <div class="project-tile">
+          <div class="project-tile-5">
             <a href="https://ullavs.nl/docs/">
-              <img />
-              <p class="project-tile">Technical Documentation Page</p>
-              <p>via freeCodeCamp</p>
+              <img
+                src="technical-documentation-page.png"
+                width="300"
+                height="200"
+              />
+              <p class="project-tile">
+                <strong>Technical Documentation Page</strong>
+              </p>
               <p>using HTML & CSS</p>
             </a>
           </div>
