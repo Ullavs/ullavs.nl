@@ -55,9 +55,12 @@
       .links-header {
         display: flex;
         list-style-type: none;
-        gap: 30px;
         margin: 0;
         padding: 0;
+      }
+
+      .links-header li + li {
+        margin-left: 30px;
       }
 
       #navbar a {
@@ -103,6 +106,7 @@
 
       #projects {
         background-color: #e8f5f8;
+        padding-bottom: 25px;
       }
 
       #projects h2,
@@ -127,7 +131,7 @@
         grid-template-rows: 1fr 1fr;
         grid-gap: 30px;
         max-width: 1000px;
-        margin: 0 auto 25px auto;
+        margin: 0 auto;
       }
 
       .projects-grid div {
@@ -217,8 +221,8 @@
           padding: 10px 0 0 0;
         }
 
-        .links-header {
-          gap: 8px;
+        .links-header li + li {
+          margin-left: 8px;
         }
 
         #navbar {
@@ -239,7 +243,7 @@
 
         .about-me-content img {
           float: center;
-          margin: 10px;
+          margin: 16px 30px;
         }
 
         .projects-grid {
