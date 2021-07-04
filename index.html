@@ -210,6 +210,13 @@
         padding: 20px 0;
       }
 
+      @media (min-width: 768px) and (max-width: 1024px) {
+        .about-me-content {
+          margin: 0 25px;
+          padding: 0 0 25px 0;
+        }
+      }
+
       @media (max-width: 480px) {
         *,
         *::before,
@@ -241,7 +248,7 @@
 
         .about-me-content {
           margin: 0 25px;
-          padding-bottom: 25px;
+          padding: 0 0 25px 0;
           font-size: 14px;
         }
 
@@ -254,9 +261,8 @@
         .projects-grid {
           grid-template-columns: 1fr 1fr;
           grid-template-rows: 1fr 1fr 1fr;
-          margin: 0 20px;
-          max-width: 1000px;
-          padding-bottom: 20px;
+          margin: 0 25px;
+          padding-bottom: 25px;
         }
 
         .projects-grid div {
