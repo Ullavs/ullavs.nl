@@ -212,6 +212,16 @@
       }
 
       @media (max-width: 1024px) {
+        *,
+        *::before,
+        *::after {
+          scroll-snap-padding-top: 70px;
+        }
+
+        #contact {
+          min-height: calc(100vh - 70px);
+        }
+
         h1 {
           font-size: 60px;
         }
