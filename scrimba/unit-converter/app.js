@@ -24,9 +24,20 @@ function calculateMass(value) {
   mass.textContent = `${value} kilograms = ${pounds} pounds | ${value} pounds = ${kilograms} kilograms`;
 }
 
+const timeOut = setTimeout(() => {
+  const value = input.value;
+  input.value = "";
+  input.focus();
+  input.value = value;
+}, 2000);
+
 input.addEventListener("keyup", (event) => {
   const inputValue = event.target.value;
   calculateLength(inputValue);
   calculateVolume(inputValue);
   calculateMass(inputValue);
+});
+
+input.addEventListener("focus", () => {
+  clearTimeout(timeOut);
 });
