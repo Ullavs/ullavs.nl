@@ -16,23 +16,31 @@
   <body>
     <header class="header">
       <h1 class="title">Metric/Imperial unit conversion</h1>
-      <div class="input">20</div>
+      <input
+        type="number"
+        id="input"
+        class="input"
+        min="0"
+        value="1"
+        required
+      />
     </header>
     <main class="main">
       <dl class="terms">
         <dt class="term">Length (Meter/Feet)</dt>
-        <dd class="details">
-          20 meters = 65.616 feet | 20 feet = 6.096 meters
+        <dd class="details" id="length">
+          1 meters = 3.281 feet | 1 feet = 0.305 meters
         </dd>
         <dt class="term">Volume (Liters/Gallons)</dt>
-        <dd class="details">
-          20 liters = 5.284 gallons | 20 gallons = 75.708 liters
+        <dd class="details" id="volume">
+          1 liters = 0.264 gallons | 1 gallons = 3.785 liters
         </dd>
         <dt class="term">Mass (Kilograms/Pounds)</dt>
-        <dd class="details">
-          20 kilos = 44.092 pounds | 20 pounds = 9.072 kilos
+        <dd class="details" id="mass">
+          1 kilograms = 2.205 pounds | 1 pounds = 0.454 kilograms
         </dd>
       </dl>
     </main>
+    <script src="app.js"></script>
   </body>
 </html>

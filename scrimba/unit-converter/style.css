@@ -75,6 +75,28 @@ select {
   font-weight: 800;
   line-height: 1;
   margin-top: 2rem;
+  background-color: inherit;
+  color: inherit;
+  text-align: center;
+  max-width: 20rem;
+  border-radius: 0.5rem;
+  border: 3px solid transparent;
+  transition: all ease-in-out 200ms;
+  padding: 0 0.75rem;
+  -moz-appearance: textfield;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.input:focus,
+.input:active,
+.input:hover {
+  outline: none;
+  border: 3px solid var(--gradient-to);
 }
 
 .main {
