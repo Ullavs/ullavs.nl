@@ -1,3 +1,4 @@
+const apiUrl = "https://www.thecolorapi.com/scheme";
 const colorForm = document.getElementById("color-form");
 
 colorForm.addEventListener("submit", (event) => {
@@ -7,9 +8,7 @@ colorForm.addEventListener("submit", (event) => {
   const color = formData.get("color").substring(1);
   const mode = formData.get("mode");
 
-  fetch(
-    `https://www.thecolorapi.com/scheme?hex=${color}&format=json&mode=${mode}&count=5`
-  )
+  fetch(`${apiUrl}?hex=${color}&format=json&mode=${mode}&count=5`)
     .then((res) => res.json())
     .then((data) => {
       data.colors.forEach((color, index) => {
