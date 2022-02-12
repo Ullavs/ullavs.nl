@@ -120,7 +120,7 @@ select {
 }
 
 .hex-codes {
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   line-height: 1.5rem;
   font-weight: 500;
   color: var(--footer-color);
@@ -130,4 +130,10 @@ select {
   list-style: none;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+}
+
+@media (min-width: 40rem) {
+  .hex-codes {
+    font-size: 0.75rem;
+  }
 }
