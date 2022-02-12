@@ -4,10 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Color Scheme Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Choose 'seed color' with an <input type="color" />' -->
+    <!-- Choose color scheme mode in a <select> box -->
+    <!-- Clicking button makes request to The Color API to get a color scheme -->
+    <!-- Display the scheme colors and hex values on the page -->
+    <!-- Stretch goal: click hex values to copy to clipboard -->
+    <!-- Mobile version -->
+    <!-- Button hover active etc. -->
+
+    <section class="color-generator">
+      <header class="header">
+        <form class="color-form">
+          <input type="color" name="color" class="color-picker" />
+          <select class="select-box">
+            <option>Monochrome</option>
+          </select>
+          <button class="button">Get color scheme</button>
+        </form>
+      </header>
+      <main class="colors">
+        <div style="background-color: #f55a5a"></div>
+        <div style="background-color: #2b283a"></div>
+        <div style="background-color: #fbf3ab"></div>
+        <div style="background-color: #aad1b6"></div>
+        <div style="background-color: #a626d3"></div>
+      </main>
+      <footer>
+        <ul class="hex-codes">
+          <li>#f55a5a</li>
+          <li>#2b283a</li>
+          <li>#fbf3ab</li>
+          <li>#aad1b6</li>
+          <li>#a626d3</li>
+        </ul>
+      </footer>
+    </section>
     <script src="app.js"></script>
   </body>
 </html>
