@@ -15,38 +15,41 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Choose 'seed color' with an <input type="color" />' -->
-    <!-- Choose color scheme mode in a <select> box -->
-    <!-- Clicking button makes request to The Color API to get a color scheme -->
-    <!-- Display the scheme colors and hex values on the page -->
     <!-- Stretch goal: click hex values to copy to clipboard -->
     <!-- Mobile version -->
     <!-- Button hover active etc. -->
 
     <section class="color-generator">
       <header class="header">
-        <form class="color-form">
+        <form class="color-form" id="color-form">
           <input type="color" name="color" class="color-picker" />
-          <select class="select-box">
-            <option>Monochrome</option>
+          <select class="select-box" name="mode">
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-dark">Monochrome dark</option>
+            <option value="monochrome-light">Monochrome light</option>
+            <option value="analogic">Analogic</option>
+            <option value="complement">Complement</option>
+            <option value="analogic-complement">Analogic complement</option>
+            <option value="triad">Triad</option>
+            <option value="quad">Quad</option>
           </select>
           <button class="button">Get color scheme</button>
         </form>
       </header>
       <main class="colors">
-        <div style="background-color: #f55a5a"></div>
-        <div style="background-color: #2b283a"></div>
-        <div style="background-color: #fbf3ab"></div>
-        <div style="background-color: #aad1b6"></div>
-        <div style="background-color: #a626d3"></div>
+        <div id="color1" style="background-color: #f55a5a"></div>
+        <div id="color2" style="background-color: #2b283a"></div>
+        <div id="color3" style="background-color: #fbf3ab"></div>
+        <div id="color4" style="background-color: #aad1b6"></div>
+        <div id="color5" style="background-color: #a626d3"></div>
       </main>
       <footer>
         <ul class="hex-codes">
-          <li>#f55a5a</li>
-          <li>#2b283a</li>
-          <li>#fbf3ab</li>
-          <li>#aad1b6</li>
-          <li>#a626d3</li>
+          <li id="hex-code1">#f55a5a</li>
+          <li id="hex-code2">#2b283a</li>
+          <li id="hex-code3">#fbf3ab</li>
+          <li id="hex-code4">#aad1b6</li>
+          <li id="hex-code5">#a626d3</li>
         </ul>
       </footer>
     </section>
