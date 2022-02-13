@@ -31,7 +31,7 @@ function copyPassword(event) {
   event.target.append(copyDiv);
   setTimeout(() => {
     copyDiv.parentNode.removeChild(copyDiv);
-  }, 1000);
+  }, 500);
 }
 
 [...passwords].forEach((password) => {

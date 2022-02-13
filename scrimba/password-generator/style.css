@@ -69,9 +69,8 @@ select {
 }
 
 .container {
-  padding-left: 3.25rem;
   padding-top: 6.6rem;
-  max-width: 500px;
+  max-width: 446px;
   margin: 0 auto;
 }
 
@@ -127,6 +126,7 @@ h1 {
   text-align: center;
   border: none;
   border-radius: 0.375rem;
+  cursor: pointer;
 }
 
 .icon-dots-light {
@@ -145,5 +145,6 @@ h1 {
 }
 
 .copy-div {
-  margin-top: -4.5rem;
+  margin-top: -4.35rem;
+  color: var(--header-color);
 }
