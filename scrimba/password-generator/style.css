@@ -77,7 +77,7 @@ select {
 h1 {
   color: var(--header-color);
   font-family: "Karla", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 800;
   line-height: 1;
 }
@@ -91,7 +91,7 @@ h1 {
   color: var(--subtext-color);
   font-weight: 400;
   line-height: 1.75rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-top: 0.625rem;
 }
 
@@ -127,6 +127,13 @@ h1 {
   border: none;
   border-radius: 0.375rem;
   cursor: pointer;
+  position: relative;
+}
+
+.copy-div {
+  position: absolute;
+  left: 42%;
+  color: var(--header-color);
 }
 
 .icon-dots-light {
@@ -144,11 +151,6 @@ h1 {
   vertical-align: middle;
 }
 
-.copy-div {
-  margin-top: -4.35rem;
-  color: var(--header-color);
-}
-
 @media (min-width: 40rem) {
   body {
     padding: 0 1rem 1rem 1rem;
@@ -158,8 +160,20 @@ h1 {
     padding-top: 6.6rem;
   }
 
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtext {
+    font-size: 1.25rem;
+  }
+
   .passwords {
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem 1.5rem;
+  }
+
+  .copy-div {
+    left: 36%;
   }
 }
