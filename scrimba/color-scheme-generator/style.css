@@ -112,6 +112,14 @@ select {
   border-radius: 0.25rem;
   cursor: pointer;
   grid-column: span 2;
+  transition: all ease-in-out 200ms;
+}
+
+.button:hover,
+.button:focus,
+button:active {
+  background-color: var(--header-color);
+  color: var(--button-color);
 }
 
 .colors {
