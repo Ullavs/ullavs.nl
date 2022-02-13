@@ -20,3 +20,20 @@ button.addEventListener("click", () => {
     password.textContent = generatePassword(15);
   });
 });
+
+function copyPassword(event) {
+  const password = event.target.textContent;
+  navigator.clipboard.writeText(password);
+
+  const copyDiv = document.createElement("div");
+  copyDiv.classList.add("copy-div");
+  copyDiv.textContent = "Copied!";
+  event.target.append(copyDiv);
+  setTimeout(() => {
+    copyDiv.parentNode.removeChild(copyDiv);
+  }, 1000);
+}
+
+[...passwords].forEach((password) => {
+  password.addEventListener("click", copyPassword);
+});
