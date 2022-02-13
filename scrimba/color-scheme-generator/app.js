@@ -1,5 +1,6 @@
 const apiUrl = "https://www.thecolorapi.com/scheme";
 const colorForm = document.getElementById("color-form");
+const copyButtons = document.querySelectorAll(".copy-button");
 
 colorForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -17,23 +18,22 @@ colorForm.addEventListener("submit", (event) => {
           hex;
         document.getElementById(`hex-code${index + 1}`).textContent = hex;
       });
-
-      // const color1 = data.colors[0].hex.value;
-      // const color2 = data.colors[1].hex.value;
-      // const color3 = data.colors[2].hex.value;
-      // const color4 = data.colors[3].hex.value;
-      // const color5 = data.colors[4].hex.value;
-
-      // document.getElementById("color1").style.backgroundColor = color1;
-      // document.getElementById("color2").style.backgroundColor = color2;
-      // document.getElementById("color3").style.backgroundColor = color3;
-      // document.getElementById("color4").style.backgroundColor = color4;
-      // document.getElementById("color5").style.backgroundColor = color5;
-
-      // document.getElementById("hex-code1").textContent = color1;
-      // document.getElementById("hex-code2").textContent = color2;
-      // document.getElementById("hex-code3").textContent = color3;
-      // document.getElementById("hex-code4").textContent = color4;
-      // document.getElementById("hex-code5").textContent = color5;
     });
+});
+
+function copyHex(event) {
+  const hexCode = event.target.textContent;
+  navigator.clipboard.writeText(hexCode);
+
+  const copyDiv = document.createElement("div");
+  copyDiv.classList.add("copy-div");
+  copyDiv.textContent = "Copied!";
+  event.target.append(copyDiv);
+  setTimeout(() => {
+    copyDiv.parentNode.removeChild(copyDiv);
+  }, 1000);
+}
+
+[...copyButtons].forEach((copyButton) => {
+  copyButton.addEventListener("click", copyHex);
 });

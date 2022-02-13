@@ -117,7 +117,7 @@ select {
 
 .button:hover,
 .button:focus,
-button:active {
+.button:active {
   background-color: var(--header-color);
   color: var(--button-color);
 }
@@ -133,7 +133,6 @@ button:active {
   font-weight: 500;
   color: var(--footer-color);
   text-align: center;
-  text-transform: uppercase;
   padding: 0.6875rem 0;
   list-style: none;
   display: grid;
@@ -144,4 +143,20 @@ button:active {
   .hex-codes {
     font-size: 0.75rem;
   }
+}
+
+.copy-button {
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.copy-div {
+  margin-top: -5rem;
+  background-color: var(--footer-color);
+  color: var(--button-color);
+  border-radius: 4px;
+  padding: 0.2rem 0.4rem;
 }
