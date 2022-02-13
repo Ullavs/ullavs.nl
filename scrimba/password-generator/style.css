@@ -50,6 +50,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: var(--background-color);
   font-family: "Inter", sans-serif;
+  padding: 1.5rem 1rem;
 }
 
 img,
@@ -69,7 +70,6 @@ select {
 }
 
 .container {
-  padding-top: 6.6rem;
   max-width: 446px;
   margin: 0 auto;
 }
@@ -113,8 +113,8 @@ h1 {
   border-top: 1px solid var(--border-color);
   padding: 2.1875rem 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 2rem 1.5rem;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
 }
 
 .password {
@@ -147,4 +147,19 @@ h1 {
 .copy-div {
   margin-top: -4.35rem;
   color: var(--header-color);
+}
+
+@media (min-width: 40rem) {
+  body {
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  .container {
+    padding-top: 6.6rem;
+  }
+
+  .passwords {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem 1.5rem;
+  }
 }
