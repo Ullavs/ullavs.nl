@@ -99,6 +99,7 @@ h1 {
   color: var(--generate-text-color);
   background-color: var(--accent-color);
   font-weight: 500;
+  font-size: 0.875rem;
   line-height: 1.5rem;
   padding: 0.5625rem 1rem;
   border: none;
@@ -114,13 +115,14 @@ h1 {
   padding: 2.1875rem 0;
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 1.5rem;
+  grid-gap: 1.7rem;
 }
 
 .password {
   color: var(--password-text-color);
   background-color: var(--password-background-color);
   font-weight: 500;
+  font-size: 0.875rem;
   line-height: 2rem;
   padding: 0.25rem 1rem;
   text-align: center;
@@ -131,8 +133,10 @@ h1 {
 }
 
 .copy-div {
+  font-size: 0.875rem;
   position: absolute;
   left: 42%;
+  top: -75%;
   color: var(--header-color);
 }
 
@@ -168,12 +172,21 @@ h1 {
     font-size: 1.25rem;
   }
 
+  .generate-button {
+    font-size: 1rem;
+  }
+
   .passwords {
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem 1.5rem;
   }
 
+  .password {
+    font-size: 1rem;
+  }
+
   .copy-div {
     left: 36%;
+    font-size: 1rem;
   }
 }
