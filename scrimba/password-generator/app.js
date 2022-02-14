@@ -1,5 +1,7 @@
 const button = document.querySelector(".generate-button");
 const passwords = document.querySelectorAll(".password");
+const lengthPassword = document.getElementById("length");
+const displayLength = document.getElementById("display");
 
 const characterSet =
   "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890~!@#$%^&*()_+=-".split(
@@ -16,9 +18,15 @@ function generatePassword(length) {
 }
 
 button.addEventListener("click", () => {
+  const length = lengthPassword.value;
+
   [...passwords].forEach((password) => {
-    password.textContent = generatePassword(15);
+    password.textContent = generatePassword(length);
   });
+});
+
+lengthPassword.addEventListener("input", (event) => {
+  displayLength.textContent = event.target.value;
 });
 
 function copyPassword(event) {
