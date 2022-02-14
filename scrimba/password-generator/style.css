@@ -99,6 +99,7 @@ h1 {
 .container-button-and-slider {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .generate-button {
@@ -120,13 +121,13 @@ h1 {
   align-items: flex-end;
 }
 
-.slider {
+.slider-number {
   color: var(--accent-color);
   font-weight: 800;
 }
 
-#length {
-  color: red;
+.slider {
+  max-width: 6.25rem;
 }
 
 .passwords {
