@@ -22,6 +22,7 @@ button.addEventListener("click", () => {
 
   [...passwords].forEach((password) => {
     password.textContent = generatePassword(length);
+    password.classList.add("active");
   });
 });
 
@@ -30,6 +31,10 @@ lengthPassword.addEventListener("input", (event) => {
 });
 
 function copyPassword(event) {
+  if (!event.target.classList.contains("active")) {
+    return false;
+  }
+
   const password = event.target.textContent;
   navigator.clipboard.writeText(password);
 

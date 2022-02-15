@@ -152,8 +152,11 @@ h1 {
   text-align: center;
   border: none;
   border-radius: 0.375rem;
-  cursor: pointer;
   position: relative;
+}
+
+.password.active {
+  cursor: pointer;
 }
 
 .copy-div {
