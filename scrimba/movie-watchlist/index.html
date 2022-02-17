@@ -6,9 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Watchlist</title>
 
-    <link rel="stylesheet" href=".css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
+
+  <!-- Two pages - index.html and watchlist.html -->
+  <!-- Index = search page. Casll to OMDB API with the title searched for and display search results -->
+  <!-- Button to 'add to watchlist' which saves data to local storage -->
+  <!-- Watchlist.html loads and displays data from local storage -->
+
+  <!-- https://www.omdbapi.com/ -->
   <body>
+    <header>
+      <h1>Find your film</h1>
+      <a href="watchlist.html">My Watchlist</a>
+    </header>
+
+    <main>
+      <div class="search-bar">
+        <img src="search-icon.svg" />
+        <input type="textfield" placeholder="Search for a movie" required />
+        <button>Search</button>
+      </div>
+      <div class="search-results">
+        <div class="start-exploring">
+          <img src="start-exploring.svg" />
+          <p>Start exploring</p>
+        </div>
+        <div class="unable">
+          <p>
+            Unable to find what you're looking for. Please try another search.
+          </p>
+        </div>
+        <div class="movie-list"></div>
+      </div>
+    </main>
+
     <script src="app.js"></script>
   </body>
 </html>
