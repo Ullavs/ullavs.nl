@@ -104,7 +104,7 @@ header p {
 }
 
 .service {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   line-height: 1rem;
   font-weight: 500;
   background-color: var(--background-color-button-top);
@@ -112,8 +112,15 @@ header p {
   border: 1px solid var(--border-color-button-top);
   border-radius: 0.4375rem;
   margin-top: 2.3125rem;
-  padding: 0.90625rem 1.125rem;
+  padding: 0.62rem 0.82rem;
   cursor: pointer;
+}
+
+@media (min-width: 31rem) {
+  .service {
+    font-size: 0.875rem;
+    padding: 0.90625rem 1.125rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
