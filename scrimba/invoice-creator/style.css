@@ -23,10 +23,6 @@
     --main-subtext-color: #d5d4d8;
     --background-color-button: #3a69d2;
   }
-
-  .service {
-    border: 2px solid var(--border-color-button-top);
-  }
 }
 
 *,
@@ -82,7 +78,7 @@ header {
   background-color: var(--background-color-header);
   text-align: center;
   /* border: 4px blue solid; */
-  padding: 3.6875rem 0 3.1875rem;
+  padding: 3.6875rem 1rem 3.1875rem;
 }
 
 h1 {
@@ -108,7 +104,7 @@ header p {
 }
 
 .service {
-  font-size: 0.7rem;
+  font-size: 0.875rem;
   line-height: 1rem;
   font-weight: 500;
   background-color: var(--background-color-button-top);
@@ -116,8 +112,14 @@ header p {
   border: 1px solid var(--border-color-button-top);
   border-radius: 0.4375rem;
   margin-top: 2.3125rem;
-  padding: 0.62rem 0.82rem;
+  padding: 0.90625rem 1.125rem;
   cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .service {
+    border: 2px solid var(--border-color-button-top);
+  }
 }
 
 .invoice-header {
@@ -228,11 +230,4 @@ header p {
 .email-icon {
   display: inline;
   margin-right: 0.875rem;
-}
-
-@media (min-width: 35rem) {
-  .service {
-    font-size: 0.875rem;
-    padding: 0.90625rem 1.125rem;
-  }
 }
