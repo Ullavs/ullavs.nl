@@ -148,8 +148,91 @@ h3 {
 
 /* Header */
 
-nav {
-  display: none;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+.nav {
+  position: fixed;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  transform: translateX(100%);
+  transition: transform 250% cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+}
+
+.nav-link {
+  color: inherit;
+  font-weight: var(--fontweight-bold);
+  font-size: var(--fontsize-h2);
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+.nav-toggle {
+  padding: 0.5em;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background: var(--color-dark);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 250ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before {
+  top: 6px;
+}
+
+.hamburger::after {
+  bottom: 6px;
 }
 
 /* Intro section */
@@ -329,21 +412,25 @@ nav {
 
 /* Footer */
 
-footer {
+.footer {
   background-color: #111;
   color: var(--color-accent);
   text-align: center;
   padding: 2.5em 0;
+  font-size: var(--fontsize-h3);
 }
 
-footer a {
+.footer a {
   text-decoration: none;
   color: inherit;
 }
 
 .footer-link {
-  font-size: var(--fs-h3);
   font-weight: var(--fw-bold);
+}
+
+.footer-link i {
+  margin-right: 0.5em;
 }
 
 .footer-link:hover,
@@ -355,7 +442,21 @@ footer a {
   text-decoration: underline;
 }
 
-.social
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 2em auto 0 auto;
+  padding: 0;
+}
+
+.social-list-item {
+  margin: 0 0.5em;
+}
+
+.social-list-links {
+  padding: 0.5em;
+}
 
 /* Logo */
 
@@ -363,6 +464,7 @@ footer a {
   color: orange;
 }
 
+/*
 .logo-container {
   margin-left: 2.5rem;
   margin-top: 0.5rem;
@@ -425,4 +527,4 @@ footer a {
 
 .logo:hover span {
   transform: skew(360deg) scaleY(1) translateX(0);
-}
+} */
