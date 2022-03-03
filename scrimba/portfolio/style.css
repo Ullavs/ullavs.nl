@@ -9,8 +9,6 @@
   margin: 0;
 }
 
-/* Custom Properties, update these for your own design */
-
 :root {
   --fontfamily-primary: "Source Sans Pro", sans-serif;
   --fontfamily-secondary: "Source Code Pro", monospace;
@@ -19,6 +17,7 @@
   --color-light: #fff;
   --color-dark: #303030;
   --color-accent: #16e0bd;
+
   --fontsize-h1: 3rem;
   --fontsize-h2: 2.25rem;
   --fontsize-h3: 1.25rem;
@@ -147,15 +146,69 @@ h3 {
 }
 
 /* Header */
-
 header {
   display: flex;
   justify-content: space-between;
   padding: 1em;
 }
 
+/* Logo */
+
+.section-title-intro span {
+  color: orange;
+}
+
 .logo {
-  max-width: 100px;
+  --primary: #1a0f00;
+  --secondary: orange;
+  --size: 2rem;
+  --transition: all 0.3s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  font-size: var(--size);
+  color: var(--primary);
+  line-height: 1.5;
+  padding-left: calc(var(--size) / 16);
+  text-decoration: none;
+}
+
+.logo::before,
+.logo::after,
+.logo span {
+  display: inline-block;
+  pointer-events: none;
+}
+
+.logo::before {
+  content: "v";
+  color: var(--secondary);
+  opacity: 1;
+  transform: rotate(90deg) translateX(calc(var(--size) / 16));
+  transition: var(--transition);
+}
+
+.logo:hover::before {
+  opacity: 0;
+}
+
+.logo::after {
+  content: "vs";
+  color: var(--secondary);
+  transform: rotate(-90deg) translateY(calc(var(--size) * -0.28))
+    translateX(calc(var(--size) / 5));
+  transition: var(--transition);
+}
+
+.logo:hover::after {
+  transform: rotate(0deg) translateY(0) translateX(0);
+}
+
+.logo span {
+  transform: skew(-20deg) scaleY(1.25) translateX(calc(var(--size) / 16));
+  transition: var(--transition);
+}
+
+.logo:hover span {
+  transform: skew(0deg) scaleY(1) translateX(0);
 }
 
 .nav {
@@ -261,6 +314,11 @@ header {
   position: relative;
 }
 
+/* !!!!!! */
+.img-container {
+  background-color: var(--color-accent);
+}
+
 .intro-img {
   box-shadow: var(--boxshadow);
 }
@@ -281,7 +339,7 @@ header {
     grid-template-columns: min-content max-content;
   }
 
-  .intro-img {
+  .img-container {
     grid-area: img;
     min-width: 250px;
     position: relative;
@@ -477,77 +535,6 @@ header {
 .social-list-links {
   padding: 0.5em;
 }
-
-/* Logo */
-
-.section-title-intro span {
-  color: orange;
-}
-
-/*
-.logo-container {
-  margin-left: 2.5rem;
-  margin-top: 0.5rem;
-  display: grid;
-  place-items: start;
-  font-family: "Poppins", sans-serif;
-}
-
-.logo {
-  font-size: 2rem;
-  position: relative;
-  color: #1a0f00;
-  transform: scale(1);
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-.logo::before {
-  content: "v";
-  color: orange;
-  display: block;
-  position: absolute;
-  text-align: right;
-  width: 50px;
-  left: -39px;
-  bottom: 14px;
-  transform: rotate(90deg);
-  opacity: 1;
-  transition: all 0.2s ease-in-out;
-}
-
-.logo::after {
-  content: "vs";
-  color: orange;
-  display: block;
-  position: absolute;
-  width: 30px;
-  right: -39px;
-  bottom: 14px;
-  width: 50px;
-  transform: rotate(270deg);
-  letter-spacing: 3px;
-  transition: all 0.2s ease-in-out;
-}
-
-.logo span {
-  display: inline-block;
-  transform: skew(340deg) scaleY(1.25) translateX(1px);
-  transition: all 0.2s ease-in-out;
-}
-
-.logo:hover::before {
-  opacity: 0;
-}
-
-.logo:hover::after {
-  transform: rotate(360deg) translate(14px, 14px);
-  letter-spacing: 1px;
-}
-
-.logo:hover span {
-  transform: skew(360deg) scaleY(1) translateX(0);
-} */
 
 /* Individual portfolio item styles  */
 
