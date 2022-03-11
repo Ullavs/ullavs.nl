@@ -10,3 +10,7 @@ navLinks.forEach((link) => {
     document.body.classList.remove("nav-open");
   });
 });
+
+document.addEventListener("scroll", (event) => {
+  navToggle.classList.toggle("scroll-toggle", window.scrollY >= 250);
+});
