@@ -98,7 +98,6 @@ h3 {
 
 section {
   padding: 3rem 1rem;
-  border-bottom: 2px solid red;
 }
 
 /* @media (min-width: 800px) {
@@ -402,6 +401,39 @@ header {
   }
 } */
 
+/* My resume */
+
+.my-resume {
+  text-align: center;
+}
+
+.section-title-resume::after {
+  content: "";
+  display: block;
+  width: 6rem;
+  height: 1px;
+  margin: 1rem auto;
+  background: var(--color-dark);
+  opacity: 0.25;
+}
+
+.resume-list {
+  list-style-type: none;
+  padding: 0 2rem;
+}
+
+.resume-list-item {
+  margin-top: 0.5rem;
+}
+
+.resume-list-item:nth-child(odd) {
+  text-align: left;
+}
+
+.resume-list-item:nth-child(even) {
+  text-align: right;
+}
+
 /* My skills */
 
 .my-skills {
@@ -456,7 +488,7 @@ header {
   transform: scale(1.2);
 }
 
-@media (min-width: 800px) {
+/* @media (min-width: 800px) {
   .skills {
     display: flex;
     max-width: 1000px;
@@ -466,7 +498,7 @@ header {
   .skill + .skill {
     margin-left: 2em;
   }
-}
+} */
 
 /* My work */
 
