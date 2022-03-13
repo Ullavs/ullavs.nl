@@ -372,7 +372,7 @@ header {
 .about-me-img {
   box-shadow: var(--boxshadow);
   object-fit: cover;
-  height: 360px;
+  height: 320px;
   width: 100%;
 }
 
