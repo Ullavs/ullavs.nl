@@ -97,7 +97,7 @@ h3 {
 }
 
 section {
-  padding: 5rem 2rem;
+  padding: 5rem 1rem;
   border-bottom: 2px solid red;
 }
 
@@ -277,10 +277,10 @@ header {
 
 /* Intro section */
 .intro {
-  position: relative;
+  /* position: relative; */
   display: grid;
-  height: 100vh;
   align-content: center;
+  height: 100vh;
 }
 
 .intro-img {
@@ -290,10 +290,10 @@ header {
 .section-subtitle-intro {
   display: inline-block;
   color: var(--color-light);
-  margin: 1em 0;
+  font-family: var(--fontfamily-secondary);
   background-color: var(--color-accent);
   padding: 0.25em 1em;
-  font-family: var(--fontfamily-secondary);
+  margin: 1em 0;
 }
 
 .section-title-intro {
@@ -308,7 +308,7 @@ header {
   color: var(--color-accent);
 }
 
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   .intro {
     height: auto;
     display: grid;
@@ -343,7 +343,7 @@ header {
     left: -1.5em;
     width: calc(100% + 1.5em);
   }
-}
+} */
 
 /* About me  */
 
