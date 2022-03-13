@@ -457,7 +457,6 @@ header {
 
 .section-title-skills {
   text-align: center;
-  position: relative;
 }
 
 .section-title-skills::after {
@@ -470,15 +469,29 @@ header {
   opacity: 0.25;
 }
 
-.skills-content h3 {
-  color: var(--color-accent);
-}
-
 .skills-list,
 .tools-list,
 .certificates-list {
   list-style-type: none;
   padding: 0;
+}
+
+.skills-content {
+  background-color: var(--color-accent);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  width: max-content;
+}
+
+.skills-content h3 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.certificates a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .btn {
