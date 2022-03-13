@@ -431,7 +431,8 @@ header {
 
 .year {
   font-weight: var(--fontweight-bold);
-  width: max-content;
+  width: 8rem;
+  display: block;
 }
 
 .resume-list-item:last-child {
