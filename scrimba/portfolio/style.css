@@ -454,35 +454,32 @@ header {
 .my-skills {
   background-color: var(--color-dark);
   color: var(--color-light);
-  text-align: center;
 }
 
 .section-title-skills {
-  color: var(--color-light);
+  text-align: center;
   position: relative;
 }
 
 .section-title-skills::after {
   content: "";
   display: block;
-  width: 2em;
+  width: 6rem;
   height: 1px;
   margin: 0.5em auto 1em;
   background: var(--color-light);
   opacity: 0.25;
 }
 
-.skills {
-  margin-bottom: 3.75rem;
-}
-
-.skill {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.skill h3 {
+.skills-content h3 {
   color: var(--color-accent);
+}
+
+.skills-list,
+.tools-list,
+.certificates-list {
+  list-style-type: none;
+  padding: 0;
 }
 
 .btn {
@@ -518,8 +515,8 @@ header {
 /* My work */
 
 .my-work {
-  background-color: var(--color-dark);
-  color: var(--color-light);
+  background-color: var(--color-light);
+  color: var(--color-dark);
   text-align: center;
 }
 
