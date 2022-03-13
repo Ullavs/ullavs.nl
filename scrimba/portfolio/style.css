@@ -248,6 +248,10 @@ header {
   opacity: 0.5;
 }
 
+.nav-open .nav-toggle {
+  opacity: 1;
+}
+
 /* @media (min-width: 1000px) {
   .nav-toggle {
     display: none;
