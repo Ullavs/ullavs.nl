@@ -199,7 +199,7 @@ header {
 
 .nav-toggle {
   position: fixed;
-  right: 1rem;
+  right: 0.75rem;
   padding: 0.25rem;
   background-color: transparent;
   border: 0;
