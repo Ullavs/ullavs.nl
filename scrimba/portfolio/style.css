@@ -21,6 +21,7 @@
   --fontsize-h2: 2.25rem;
   --fontsize-h3: 1.25rem;
   --fontsize-body: 1rem;
+  --fontsize-resume: 0.75rem;
   --boxshadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
@@ -31,6 +32,7 @@
     --fontsize-h2: 3.75rem;
     --fontsize-h3: 1.5rem;
     --fontsize-body: 1.25rem;
+    --fontsize-resume: 1rem;
   }
 }
 
@@ -423,30 +425,27 @@ header {
 }
 
 .resume-list-item {
-  display: flex;
-  justify-content: space-between;
   text-align: left;
-  margin-top: 0.5rem;
+  font-weight: var(--fontweight-bold);
+  font-size: var(--fontsize-resume);
+  border-bottom: 1px solid #30303025;
+  padding: 0.5rem 0;
 }
 
 .year {
-  font-weight: var(--fontweight-bold);
-  width: 8rem;
-  display: block;
+  font-weight: var(--fontweight-reg);
 }
 
-.resume-list-item:last-child {
-  font-weight: var(--fontweight-bold);
-  text-align: center;
-  background-color: var(--color-accent);
-  color: var(--color-light);
-  border-radius: 0.5rem;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-.change-careers {
+.career-change {
   text-decoration: none;
+  color: inherit;
+  transition: all 250ms ease-in-out;
+  background-color: red;
+}
+
+.career-change .resume-list-item:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
 }
 
 /* My skills */
