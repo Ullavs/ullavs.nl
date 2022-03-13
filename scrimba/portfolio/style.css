@@ -425,16 +425,12 @@ header {
 .resume-list-item {
   display: flex;
   justify-content: space-between;
+  text-align: left;
   margin-top: 0.5rem;
 }
 
-.resume-specific-item {
-  display: block;
-}
-
-.resume-specific-item span {
+.year {
   font-weight: var(--fontweight-bold);
-  text-align: left;
 }
 
 .resume-list-item:last-child {
