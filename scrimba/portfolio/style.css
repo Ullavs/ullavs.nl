@@ -21,7 +21,7 @@
   --fontsize-h2: 2.25rem;
   --fontsize-h3: 1.25rem;
   --fontsize-body: 1rem;
-  --fontsize-resume: 0.75rem;
+  --fontsize-small: 0.75rem;
   --boxshadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
@@ -32,7 +32,7 @@
     --fontsize-h2: 3.75rem;
     --fontsize-h3: 1.5rem;
     --fontsize-body: 1.25rem;
-    --fontsize-resume: 1rem;
+    --fontsize-small: 1rem;
   }
 }
 
@@ -427,7 +427,7 @@ header {
 .resume-list-item {
   text-align: left;
   font-weight: var(--fontweight-bold);
-  font-size: var(--fontsize-resume);
+  font-size: var(--fontsize-small);
   border-bottom: 1px solid #30303025;
   padding: 0.5rem 0;
 }
@@ -453,9 +453,6 @@ header {
 .my-skills {
   background-color: var(--color-dark);
   color: var(--color-light);
-}
-
-.section-title-skills {
   text-align: center;
 }
 
@@ -469,6 +466,15 @@ header {
   opacity: 0.25;
 }
 
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "skills tools"
+    "certificates certificates";
+  grid-gap: 1rem;
+}
+
 .skills-list,
 .tools-list,
 .certificates-list {
@@ -476,12 +482,25 @@ header {
   padding: 0;
 }
 
+.skills {
+  grid-area: skills;
+}
+
+.tools {
+  grid-area: tools;
+}
+
+.certificates {
+  grid-area: certificates;
+}
+
 .skills-content {
   background-color: var(--color-accent);
   border-radius: 0.5rem;
   padding: 1rem;
   margin-bottom: 0.5rem;
-  width: max-content;
+  width: 100%;
+  text-align: left;
 }
 
 .skills-content h3 {
@@ -501,11 +520,11 @@ header {
   color: var(--color-light);
   text-decoration: none;
   cursor: pointer;
-  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: var(--fontweight-bold);
   transition: transform 200ms ease-in-out;
+  margin-top: 1rem;
 }
 
 .btn:hover {
