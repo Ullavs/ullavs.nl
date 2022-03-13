@@ -441,7 +441,11 @@ header {
   color: var(--color-light);
   border-radius: 0.5rem;
   padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
+}
+
+.change-careers {
+  text-decoration: none;
 }
 
 /* My skills */
