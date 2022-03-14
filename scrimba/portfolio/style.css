@@ -573,12 +573,16 @@ header {
 .footer {
   background-color: #111;
   color: var(--color-accent);
-  text-align: center;
   padding: 3rem 1rem;
   font-size: var(--fontsize-h3);
+  height: 100vh;
+  display: grid;
+  align-content: center;
+  text-align: center;
 }
 
 .spark {
+  font-size: var(--fontsize-h2);
   color: var(--color-light);
   margin: 2rem 0;
 }
