@@ -501,34 +501,18 @@ header {
   margin-bottom: 0.5rem;
   width: 100%;
   text-align: left;
+  box-shadow: var(--boxshadow);
 }
 
 .skills-content h3 {
   text-transform: uppercase;
   letter-spacing: 2px;
+  margin-bottom: 0.5rem;
 }
 
 .certificates a {
   text-decoration: none;
   color: inherit;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.5em 2.5em;
-  background-color: var(--color-accent);
-  color: var(--color-light);
-  text-decoration: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: var(--fontweight-bold);
-  transition: transform 200ms ease-in-out;
-  margin-top: 1rem;
-}
-
-.btn:hover {
-  transform: scale(1.2);
 }
 
 /* @media (min-width: 800px) {
@@ -590,8 +574,13 @@ header {
   background-color: #111;
   color: var(--color-accent);
   text-align: center;
-  padding: 2.5em 0;
+  padding: 3rem 1rem;
   font-size: var(--fontsize-h3);
+}
+
+.spark {
+  color: var(--color-light);
+  margin: 2rem 0;
 }
 
 .footer a {
