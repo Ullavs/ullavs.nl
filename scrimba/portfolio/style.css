@@ -38,6 +38,11 @@
 
 /* General styles */
 
+::selection {
+  color: var(--color-light);
+  background-color: var(--color-accent);
+}
+
 html,
 body {
   height: 100%;
