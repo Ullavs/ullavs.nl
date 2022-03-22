@@ -397,27 +397,25 @@ header {
   width: 100%;
 }
 
-/* @media (min-width: 600px) {
-  .about-me {
-    display: block;
+@media (min-width: 600px) {
+  .section-title-about {
+    text-align: center;
   }
 
-  .section-title-about {
-    grid-area: title;
+  .about-me-body {
+    max-width: 1500px;
+    margin: 0 auto;
   }
 
   .section-subtitle-about {
-    position: relative;
-    left: -1em;
-    width: calc(100% + 2em);
-    padding-left: 1em;
-    padding-right: calc(200px + 4em);
+    max-width: 1500px;
+    margin: 1rem auto;
   }
 
   .about-me-img {
     display: none;
   }
-} */
+}
 
 /* My resume */
 
@@ -531,17 +529,15 @@ header {
   color: inherit;
 }
 
-/* @media (min-width: 800px) {
-  .skills {
-    display: flex;
-    max-width: 1000px;
-    margin: 0 auto 3.75rem;
+@media (min-width: 1000px) {
+  .skills-container {
+    display: grid;
+    grid-template-columns: minmax(0, 200px) minmax(0, 200px) minmax(0, 700px);
+    grid-gap: 2rem;
+    place-content: center;
+    grid-template-areas: "skills tools certificates";
   }
-
-  .skill + .skill {
-    margin-left: 2em;
-  }
-} */
+}
 
 /* My work */
 
