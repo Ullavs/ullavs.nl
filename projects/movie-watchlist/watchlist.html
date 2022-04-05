@@ -9,12 +9,75 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
+  <!-- Module 7.3 -->
+  <!-- https://www.figma.com/file/jhFRdFIdHpRxsDznNXtpXw/Watchlist-Creator?node-id=0%3A1 -->
+  <!-- https://www.omdbapi.com/ -->
   <!-- Two pages - index.html and watchlist.html -->
   <!-- Index = search page. Casll to OMDB API with the title searched for and display search results -->
   <!-- Button to 'add to watchlist' which saves data to local storage -->
   <!-- Watchlist.html loads and displays data from local storage -->
 
   <body>
+    <header>
+      <h1>My Watchlist</h1>
+      <a href="index.html">Search for movies</a>
+    </header>
+
+    <main>
+
+        <div class="empty-watchlist">
+          <p>Your watchlist is looking a little empty...</p>
+          <p><img src="plus-icon.svg" />Let's add some movies!</p>
+        </div>
+
+        <div class="movie-list">
+          <div class="movie-result">
+            <img src="bladerunner2049.jpg" />
+            <h3 class="movie-title">Blade Runner 2049</h3>
+            <span class="rating"><img src="star-icon.svg" />8.0</span>
+            <div class="movie-details">
+              <span class="movie-duration">164 min</span>
+              <span class="movie-genre">Action, Drama, Mystery</span>
+            </div>
+            <button><img src="remove-icon.svg" />Remove</button>
+            <p class="movie-summary">
+              Young Blade Runner K's discovery of a long-buried secret leads him
+              to track down former Blade Runner Rick Deckard, who's been
+              missin...
+            </p>
+          </div>
+
+           <div class="movie-result">
+            <img src="encanto.jpg" />
+            <h3 class="movie-title">Encanto</h3>
+            <span class="rating"><img src="star-icon.svg" />7.3</span>
+            <div class="movie-details">
+              <span class="movie-duration">102 min</span>
+              <span class="movie-genre">Animation, Adventure, Comedy</span>
+            </div>
+            <button><img src="remove-icon.svg" />Remove</button>
+            <p class="movie-summary">
+              A young Colombian woman has to face the frustration of being the only member of her family without magical powers.
+            </p>
+          </div>
+
+          <div class="movie-result">
+            <img src="citizenkane.jpg" />
+            <h3 class="movie-title">Citizen Kane</h3>
+            <span class="rating"><img src="star-icon.svg" />8.3</span>
+            <div class="movie-details">
+              <span class="movie-duration">119 min</span>
+              <span class="movie-genre">Drama, Mystery</span>
+            </div>
+            <button><img src="remove-icon.svg" />Remove</button>
+            <p class="movie-summary">
+              Following the death of publishing tycoon Charles Foster Kane, reporters scramble to uncover the meaning of his final utterance
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <script src="app.js"></script>
   </body>
 </html>
