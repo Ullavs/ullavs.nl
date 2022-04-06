@@ -5,7 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Watchlist</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -19,60 +24,62 @@
 
   <body>
     <header>
-      <h1>My Watchlist</h1>
-      <a href="index.html">Search for movies</a>
+      <div class="header-container container">
+        <h1>My Watchlist</h1>
+        <a class="header-link" href="index.html">Search for movies</a>
+      </div>
     </header>
 
-    <main>
-        <div class="empty-watchlist">
-          <p>Your watchlist is looking a little empty...</p>
-          <p><img src="plus-icon.svg" />Let's add some movies!</p>
+    <main class="container">
+      <div class="empty-watchlist">
+        <p>Your watchlist is looking a little empty...</p>
+        <p><img src="plus-icon.svg" />Let's add some movies!</p>
+      </div>
+
+      <div class="movie-list">
+        <div class="movie-result">
+          <img src="bladerunner2049.jpg" />
+          <h3 class="movie-title">Blade Runner 2049</h3>
+          <span class="rating"><img src="star-icon.svg" />8.0</span>
+          <div class="movie-details">
+            <span class="movie-duration">164 min</span>
+            <span class="movie-genre">Action, Drama, Mystery</span>
+          </div>
+          <button><img src="remove-icon.svg" />Remove</button>
+          <p class="movie-summary">
+            Young Blade Runner K's discovery of a long-buried secret leads him
+            to track down former Blade Runner Rick Deckard, who's been missin...
+          </p>
         </div>
 
-        <div class="movie-list">
-          <div class="movie-result">
-            <img src="bladerunner2049.jpg" />
-            <h3 class="movie-title">Blade Runner 2049</h3>
-            <span class="rating"><img src="star-icon.svg" />8.0</span>
-            <div class="movie-details">
-              <span class="movie-duration">164 min</span>
-              <span class="movie-genre">Action, Drama, Mystery</span>
-            </div>
-            <button><img src="remove-icon.svg" />Remove</button>
-            <p class="movie-summary">
-              Young Blade Runner K's discovery of a long-buried secret leads him
-              to track down former Blade Runner Rick Deckard, who's been
-              missin...
-            </p>
+        <div class="movie-result">
+          <img src="encanto.jpg" />
+          <h3 class="movie-title">Encanto</h3>
+          <span class="rating"><img src="star-icon.svg" />7.3</span>
+          <div class="movie-details">
+            <span class="movie-duration">102 min</span>
+            <span class="movie-genre">Animation, Adventure, Comedy</span>
           </div>
+          <button><img src="remove-icon.svg" />Remove</button>
+          <p class="movie-summary">
+            A young Colombian woman has to face the frustration of being the
+            only member of her family without magical powers.
+          </p>
+        </div>
 
-           <div class="movie-result">
-            <img src="encanto.jpg" />
-            <h3 class="movie-title">Encanto</h3>
-            <span class="rating"><img src="star-icon.svg" />7.3</span>
-            <div class="movie-details">
-              <span class="movie-duration">102 min</span>
-              <span class="movie-genre">Animation, Adventure, Comedy</span>
-            </div>
-            <button><img src="remove-icon.svg" />Remove</button>
-            <p class="movie-summary">
-              A young Colombian woman has to face the frustration of being the only member of her family without magical powers.
-            </p>
+        <div class="movie-result">
+          <img src="citizenkane.jpg" />
+          <h3 class="movie-title">Citizen Kane</h3>
+          <span class="rating"><img src="star-icon.svg" />8.3</span>
+          <div class="movie-details">
+            <span class="movie-duration">119 min</span>
+            <span class="movie-genre">Drama, Mystery</span>
           </div>
-
-          <div class="movie-result">
-            <img src="citizenkane.jpg" />
-            <h3 class="movie-title">Citizen Kane</h3>
-            <span class="rating"><img src="star-icon.svg" />8.3</span>
-            <div class="movie-details">
-              <span class="movie-duration">119 min</span>
-              <span class="movie-genre">Drama, Mystery</span>
-            </div>
-            <button><img src="remove-icon.svg" />Remove</button>
-            <p class="movie-summary">
-              Following the death of publishing tycoon Charles Foster Kane, reporters scramble to uncover the meaning of his final utterance
-            </p>
-          </div>
+          <button><img src="remove-icon.svg" />Remove</button>
+          <p class="movie-summary">
+            Following the death of publishing tycoon Charles Foster Kane,
+            reporters scramble to uncover the meaning of his final utterance
+          </p>
         </div>
       </div>
     </main>
