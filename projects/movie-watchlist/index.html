@@ -22,6 +22,7 @@
   <!-- Index = search page. Casll to OMDB API with the title searched for and display search results -->
   <!-- Button to 'add to watchlist' which saves data to local storage -->
   <!-- Watchlist.html loads and displays data from local storage -->
+  <!-- MOBILE Design qua lettergroottes etc.! -->
 
   <body>
     <header>
@@ -33,15 +34,23 @@
 
     <main class="container">
       <div class="search-bar">
-        <img src="search-icon.svg" />
-        <input type="text" placeholder="Search for a movie" required />
-        <button>Search</button>
+        <label class="search-label" aria-label="search" for="search"
+          ><img src="search-icon.svg"
+        /></label>
+        <input
+          id="search"
+          class="search-input"
+          type="text"
+          placeholder="Search for a movie"
+          required
+        />
+        <button class="search-button">Search</button>
       </div>
 
       <div class="search-results">
         <div class="start-exploring">
           <img src="start-exploring.svg" />
-          <p>Start exploring</p>
+          <p class="start-exploring-text">Start exploring</p>
         </div>
 
         <div class="unable">

@@ -5,9 +5,10 @@
   --movie-title-color: #000000;
   --movie-details-color: #111827;
   --search-text-color: #374151;
-  --search-button-color: #d1d5db;
-  --search-icon-color: #9ca3af;
+  --search-button-color: #f9fafb;
+  --search-border-color: #d1d5db;
   --background-text: #dfdddd;
+  --movie-border-color: #e5e7eb;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -19,8 +20,9 @@
     --movie-details-color: #fff;
     --search-text-color: #fff;
     --search-button-color: #4b4b4b;
-    --search-icon-color: #9ca3af;
+    --search-border-color: #4b4b4b;
     --background-text: #2e2e2f;
+    --movie-border-color: #2C2C2C;
   }
 } */
 
@@ -62,6 +64,12 @@ select {
   font: inherit;
 }
 
+.container {
+  padding-inline: 1rem;
+  margin-inline: auto;
+  max-width: 48rem;
+}
+
 header {
   background-image: url(header-img.jpg);
   background-color: #302f2fe6;
@@ -76,16 +84,16 @@ header {
   padding: 2.75rem 1rem;
 }
 
-.container {
-  padding-inline: 1rem;
-  margin-inline: auto;
-  max-width: 48rem;
-}
-
 h1 {
-  font-size: 2.65rem;
+  font-size: 1.5rem;
   color: var(--header-color);
   font-weight: 800;
+}
+
+@media (min-width: 550px) {
+  h1 {
+    font-size: 2.65rem;
+  }
 }
 
 .header-link {
@@ -93,4 +101,67 @@ h1 {
   color: var(--header-color);
   font-weight: 700;
   text-decoration: none;
+}
+
+.search-bar {
+  display: flex;
+  margin-top: -20px;
+  margin-bottom: 32px;
+  background-color: var(--background-color);
+  border: 1px solid var(--search-border-color);
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
+.search-label {
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.search-input {
+  font-size: 0.875rem;
+  color: var(--text-color);
+  font-weight: 500;
+  width: 100%;
+  border: none;
+  padding: 0.5625rem;
+  background-color: transparent;
+}
+
+.search-button {
+  font-size: 0.875rem;
+  color: var(--search-text-color);
+  font-weight: 500;
+  background-color: var(--search-button-color);
+  border: none;
+  border-left: 1px solid var(--search-border-color);
+  padding: 0.5625rem 2rem;
+}
+
+.start-exploring {
+  display: grid;
+  place-items: center;
+  grid-gap: 0.5rem;
+  margin-top: 10rem;
+}
+
+@media (min-width: 550px) {
+  .start-exploring {
+    margin-top: 20rem;
+  }
+}
+
+.start-exploring-text {
+  font-size: 1.125rem;
+  color: var(--background-text);
+  font-weight: 700;
+}
+
+.unable {
+  display: none;
+}
+
+.movie-list {
+  display: none;
 }
