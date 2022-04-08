@@ -122,6 +122,10 @@ h1 {
   cursor: pointer;
 }
 
+.search-label img {
+  max-width: none;
+}
+
 .search-input {
   font-size: 0.875rem;
   color: var(--text-color);
@@ -130,7 +134,10 @@ h1 {
   border: none;
   padding: 0.5625rem;
   background-color: transparent;
-  cursor: pointer;
+}
+
+.search-input:focus {
+  outline: none;
 }
 
 .search-button {
@@ -239,6 +246,10 @@ h1 {
   grid-column-gap: 0.5rem;
   padding: 1rem 0;
   border-bottom: 1.5px solid var(--movie-border-color);
+}
+
+.movie-result:last-of-type {
+  border: none;
 }
 
 @media (min-width: 550px) {
