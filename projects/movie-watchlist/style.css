@@ -23,7 +23,8 @@
     --search-button-color: #4b4b4b;
     --search-border-color: #4b4b4b;
     --background-text: #2e2e2f;
-    --movie-border-color: #2C2C2C;
+    --movie-border-color: #2c2c2c;
+    --add-movies-text-color: #fff;
   }
 } */
 
@@ -234,9 +235,16 @@ h1 {
     "poster titleRating"
     "poster detailsWatchlist"
     "poster description";
-  gap: 0.5rem 1.5rem;
-  padding: 1.5rem 0;
+  gap: 0.2rem 1rem;
+  padding: 1rem 0;
   border-bottom: 1.5px solid var(--movie-border-color);
+}
+
+@media (min-width: 550px) {
+  .movie-result {
+    gap: 0.5rem 1.5rem;
+    padding: 1.5rem 0;
+  }
 }
 
 .movie-poster {
@@ -274,20 +282,44 @@ h1 {
   font-size: 0.75rem;
   color: var(--movie-details-color);
   font-weight: 400;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-areas:
+    "duration genre"
+    "addOrRemove addOrRemove";
+  padding: 1rem 0;
+  grid-row-gap: 0.5rem;
+}
+
+@media (min-width: 550px) {
+  .movie-details {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+.movie-duration {
+  grid-area: duration;
+}
+
+.movie-genre {
+  grid-area: genre;
 }
 
 .add-watchlist,
 .remove-watchlist {
-  grid-area: watchlist;
+  grid-area: addOrRemove;
+  color: var(--add-movies-text-color);
   background-color: transparent;
   border: none;
   display: inline-flex;
   gap: 0.25rem;
   padding: 0;
   line-height: inherit;
+}
+
+.add-watchlist img {
+  fill: #fff;
 }
 
 .movie-summary {
