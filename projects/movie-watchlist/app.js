@@ -6,6 +6,7 @@
 // when the watchlist is empty --> watchlist is empty --> add movies
 
 // NICE TO HAVES
+// - loading state
 // - search bar leeg als je hebt ingevuld
 // - zonder data -> opvulmateriaal
 // - when text description is too long --> ... read more
