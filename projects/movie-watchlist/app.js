@@ -14,7 +14,7 @@
 // - searchbar wordt wit (= lelijk!)
 
 const API_KEY = "2a7ca420";
-const API_URL = `http://www.omdbapi.com/?apikey=${API_KEY}&type=movie`;
+const API_URL = `https://www.omdbapi.com/?apikey=${API_KEY}&type=movie`;
 const searchBar = document.getElementById("search-bar");
 const searchInput = document.getElementById("search");
 const movieList = document.getElementById("movie-list");
