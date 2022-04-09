@@ -164,14 +164,16 @@ h1 {
   color: var(--search-button-color);
 }
 
+.search-results {
+  padding-bottom: 4rem;
+}
+
 .start-exploring {
   display: grid;
   align-content: center;
   justify-items: center;
   grid-gap: 0.5rem;
   min-height: 50vh;
-  /* TEMPORARY */
-  display: none;
 }
 
 .start-exploring-text {
@@ -184,11 +186,9 @@ h1 {
   font-size: 1.125rem;
   color: var(--background-text);
   font-weight: 700;
-  display: grid;
   place-items: center;
   text-align: center;
   min-height: 50vh;
-  /* TEMPORARY */
   display: none;
 }
 
@@ -238,7 +238,7 @@ h1 {
     "poster titleRating"
     "poster detailsWatchlist"
     "poster description";
-  grid-column-gap: 0.5rem;
+  grid-gap: 0.5rem;
   padding: 1rem 0;
   border-bottom: 1.5px solid var(--movie-border-color);
 }
@@ -249,14 +249,15 @@ h1 {
 
 @media (min-width: 550px) {
   .movie-result {
-    grid-template-columns: max-content auto;
-    grid-column-gap: 1rem;
+    grid-template-columns: 100px auto;
+    gap: 0.5rem 1rem;
     padding: 1.5rem 0;
   }
 }
 
 .movie-poster {
   grid-area: poster;
+  height: auto;
 }
 
 .title-rating {
@@ -280,6 +281,10 @@ h1 {
   display: flex;
 }
 
+.rating-icon {
+  margin-right: 0.25rem;
+}
+
 .movie-details {
   grid-area: detailsWatchlist;
   font-size: 0.75rem;
@@ -291,7 +296,6 @@ h1 {
     "duration genre"
     "addOrRemove addOrRemove";
   grid-gap: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 550px) {
@@ -299,7 +303,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0, 5rem;
   }
 }
 
