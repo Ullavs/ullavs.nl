@@ -10,6 +10,8 @@
 // - search bar leeg als je hebt ingevuld
 // - zonder data -> opvulmateriaal
 // - when text description is too long --> ... read more
+// - linkje naar imdb website bij klikken titel of poster
+// - series ook toevoegen?
 // - in case of 10 or more movies --> extra page (or show more)
 // - order list to A-Z / Z-A
 // - searchbar wordt wit (= lelijk!)
