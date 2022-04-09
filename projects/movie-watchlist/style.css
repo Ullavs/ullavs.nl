@@ -12,7 +12,7 @@
   --add-movies-text-color: #363636;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --background-color: #121212;
     --header-color: #fff;
@@ -26,7 +26,15 @@
     --movie-border-color: #2c2c2c;
     --add-movies-text-color: #fff;
   }
-} */
+
+  .plus-icon {
+    fill: #fff;
+  }
+
+  .remove-icon {
+    fill: #fff;
+  }
+}
 
 *,
 *::before,
@@ -202,14 +210,15 @@ h1 {
 }
 
 .add-movies {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.empty-link {
   font-size: 0.875rem;
   color: var(--add-movies-text-color);
   font-weight: 700;
-  display: flex;
-}
-
-.add-movies-icon {
-  margin-right: 0.5rem;
+  text-decoration: none;
 }
 
 .movie-list {
@@ -271,11 +280,6 @@ h1 {
   display: flex;
 }
 
-.rating-icon {
-  width: 15px;
-  height: 15px;
-}
-
 .movie-details {
   grid-area: detailsWatchlist;
   font-size: 0.75rem;
@@ -317,10 +321,7 @@ h1 {
   gap: 0.25rem;
   padding: 0;
   line-height: inherit;
-}
-
-.add-watchlist img {
-  fill: #fff;
+  cursor: pointer;
 }
 
 .movie-summary {
