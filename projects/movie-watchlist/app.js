@@ -10,7 +10,7 @@
 // - search bar leeg als je hebt ingevuld
 // - zonder data -> opvulmateriaal
 // - when text description is too long --> ... read more
-// - linkje naar imdb website bij klikken titel of poster
+// - linkje naar imdb website bij klikken titel of poster (https://www.imdb.com/title/${imdbID}/)
 // - series ook toevoegen?
 // - in case of 10 or more movies --> extra page (or show more)
 // - order list to A-Z / Z-A
@@ -58,7 +58,7 @@ const showMovies = (movies) => {
     const duration = movie.Runtime;
     const genre = movie.Genre;
     const summary = movie.Plot;
-
+    const movieID = movie.imdbID;
     return `
       <div class="movie-result">
         <img
@@ -83,22 +83,35 @@ const showMovies = (movies) => {
         <div class="movie-details">
           <span class="movie-duration">${duration}</span>
           <span class="movie-genre">${genre}</span>
-          <button class="add-watchlist">
+          <button class="add-watchlist" data-id="${movieID}">
             <svg
               width="16"
               height="16"
               viewBox="0 0 16 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              class="plus-icon"
             >
               <path
-                class="plus-icon"
                 fill-rule="evenodd"
                 clip-rule="evenodd"
                 d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM9 5C9 4.44772 8.55228 4 8 4C7.44772 4 7 4.44772 7 5V7H5C4.44772 7 4 7.44771 4 8C4 8.55228 4.44772 9 5 9H7V11C7 11.5523 7.44772 12 8 12C8.55228 12 9 11.5523 9 11V9H11C11.5523 9 12 8.55228 12 8C12 7.44772 11.5523 7 11 7H9V5Z"
-                fill="#111827"
               />
             </svg>
+            <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="remove-icon"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM5 7C4.44772 7 4 7.44772 4 8C4 8.55228 4.44772 9 5 9H11C11.5523 9 12 8.55229 12 8C12 7.44772 11.5523 7 11 7H5Z"
+                />
+              </svg>
             Watchlist
           </button>
         </div>
@@ -119,4 +132,50 @@ const showNoResults = () => {
   movieList.style.display = "none";
   startExploring.style.display = "none";
   unableToFind.style.display = "grid";
+};
+
+movieList.addEventListener("click", (event) => {
+  const target = event.target.closest(".add-watchlist");
+
+  if (target && target.classList.contains("add-watchlist")) {
+    addToLocalStorage(target);
+    event.stopImmediatePropagation();
+  }
+});
+
+const addToLocalStorage = (target) => {
+  const ID = target.dataset.id;
+  const IDsList = JSON.parse(window.localStorage.getItem("IDsList") || "[]");
+
+  if (!IDsList.includes(ID)) {
+    IDsList.push(ID);
+    window.localStorage.setItem("IDsList", JSON.stringify(IDsList));
+  }
+
+  target.classList.toggle("add-watchlist");
+  target.classList.toggle("remove-watchlist");
+};
+
+movieList.addEventListener("click", (event) => {
+  const target = event.target.closest(".remove-watchlist");
+
+  if (target && target.classList.contains("remove-watchlist")) {
+    removeFromLocalStorage(target);
+    event.stopImmediatePropagation();
+  }
+});
+
+const removeFromLocalStorage = (target) => {
+  const ID = target.dataset.id;
+  const IDsList = JSON.parse(window.localStorage.getItem("IDsList") || "[]");
+
+  if (IDsList.includes(ID)) {
+    const newIDsList = IDsList.filter((item) => {
+      return item !== ID;
+    });
+    window.localStorage.setItem("IDsList", JSON.stringify(newIDsList));
+  }
+
+  target.classList.toggle("add-watchlist");
+  target.classList.toggle("remove-watchlist");
 };

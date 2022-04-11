@@ -328,6 +328,18 @@ h1 {
   cursor: pointer;
 }
 
+.remove-icon {
+  display: none;
+}
+
+.remove-watchlist .remove-icon {
+  display: block;
+}
+
+.remove-watchlist .plus-icon {
+  display: none;
+}
+
 .movie-summary {
   grid-area: description;
   font-size: 0.875rem;
