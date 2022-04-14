@@ -536,7 +536,7 @@ header {
 
 .hover-items {
   width: 100%;
-  height: 120%;
+  height: 100%;
   background-color: var(--color-light);
   text-decoration: none;
   color: var(--color-dark);
