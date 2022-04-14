@@ -1,21 +1,3 @@
-// - + button --> saving to local storage
-// - when + button hit --> unable + button
-// - - button --> removing from local storage
-// - - button --> list re-ordering
-
-// when the watchlist is empty --> watchlist is empty --> add movies
-
-// NICE TO HAVES
-// - loading state
-// - search bar leeg als je hebt ingevuld
-// - zonder data -> opvulmateriaal
-// - when text description is too long --> ... read more
-// - linkje naar imdb website bij klikken titel of poster (https://www.imdb.com/title/${imdbID}/)
-// - series ook toevoegen?
-// - in case of 10 or more movies --> extra page (or show more)
-// - order list to A-Z / Z-A
-// - searchbar wordt wit (= lelijk!)
-
 const API_KEY = "2a7ca420";
 const API_URL = `https://www.omdbapi.com/?apikey=${API_KEY}&type=movie`;
 const searchBar = document.getElementById("search-bar");
@@ -23,27 +5,33 @@ const searchInput = document.getElementById("search");
 const movieList = document.getElementById("movie-list");
 const startExploring = document.getElementById("start-exploring");
 const unableToFind = document.getElementById("unable");
+const emptyWatchlist = document.getElementById("empty-watchlist");
 
-searchBar.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const searchTerm = searchInput.value;
+if (searchBar) {
+  searchBar.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const searchTerm = searchInput.value;
 
-  fetch(`${API_URL}&s=${searchTerm}`)
-    .then((res) => {
-      if (!res.ok) {
-        throw Error("Search is unavailable");
-      }
-      return res.json();
-    })
-    .then((data) => fetchMovies(data.Search))
-    .then((movies) => showMovies(movies))
-    .catch((err) => showNoResults());
-});
+    fetch(`${API_URL}&s=${searchTerm}`)
+      .then((res) => {
+        if (!res.ok) {
+          throw Error("Search is unavailable");
+        }
+        return res.json();
+      })
 
-const fetchMovies = (movieResults) => {
+      .then((data) => data.Search.map((movieResult) => movieResult.imdbID))
+
+      .then((movieIDs) => fetchMovies(movieIDs))
+      .then((movies) => showMovies(movies))
+      .catch((err) => showNoResults());
+  });
+}
+
+const fetchMovies = (movieIDs) => {
   return Promise.all(
-    movieResults.map((movieResult) => {
-      return fetch(`${API_URL}&i=${movieResult.imdbID}`);
+    movieIDs.map((movieID) => {
+      return fetch(`${API_URL}&i=${movieID}`);
     })
   ).then((responses) =>
     Promise.all(responses.map((response) => response.json()))
@@ -51,25 +39,31 @@ const fetchMovies = (movieResults) => {
 };
 
 const showMovies = (movies) => {
+  const IDsList = JSON.parse(window.localStorage.getItem("IDsList") || "[]");
   const moviesHtml = movies.map((movie) => {
     const poster = movie.Poster;
     const title = movie.Title;
     const rating = movie.imdbRating;
     const duration = movie.Runtime;
     const genre = movie.Genre;
-    const summary = movie.Plot;
+    const summary =
+      movie.Plot === "N/A" || movie.Plot.slice(-1) === "."
+        ? movie.Plot
+        : `${movie.Plot.trim()}...`;
     const movieID = movie.imdbID;
+    const onWatchlist = IDsList.includes(movieID);
     return `
       <div class="movie-result">
+        <a class="movie-poster" href="https://www.imdb.com/title/${movieID}/"> 
         <img
-          class="movie-poster"
           src="${poster === "N/A" ? "default-movie-poster.jpg" : poster}"
           alt="movie poster"
           width="300"
           height="447"
         />
+        </a> 
         <div class="title-rating">
-          <h3 class="movie-title">${title}</h3>
+          <h3 class="movie-title"><a href="https://www.imdb.com/title/${movieID}/">${title}</a></h3>
           <span class="movie-rating"
             ><img
               class="rating-icon"
@@ -83,7 +77,9 @@ const showMovies = (movies) => {
         <div class="movie-details">
           <span class="movie-duration">${duration}</span>
           <span class="movie-genre">${genre}</span>
-          <button class="add-watchlist" data-id="${movieID}">
+          <button class="${
+            !onWatchlist ? "add-watchlist" : "remove-watchlist"
+          }" data-id="${movieID}">
             <svg
               width="16"
               height="16"
@@ -123,8 +119,13 @@ const showMovies = (movies) => {
   });
 
   movieList.innerHTML = moviesHtml.join("");
-  startExploring.style.display = "none";
-  unableToFind.style.display = "none";
+  if (startExploring) {
+    startExploring.style.display = "none";
+  }
+
+  if (unableToFind) {
+    unableToFind.style.display = "none";
+  }
   movieList.style.display = "block";
 };
 
@@ -161,6 +162,14 @@ movieList.addEventListener("click", (event) => {
 
   if (target && target.classList.contains("remove-watchlist")) {
     removeFromLocalStorage(target);
+
+    if (movieList.classList.contains("movie-watchlist")) {
+      target.closest(".movie-result").remove();
+      if (!movieList.children.length) {
+        emptyWatchlist.style.display = "grid";
+      }
+    }
+
     event.stopImmediatePropagation();
   }
 });
@@ -179,3 +188,20 @@ const removeFromLocalStorage = (target) => {
   target.classList.toggle("add-watchlist");
   target.classList.toggle("remove-watchlist");
 };
+
+const showWatchlist = async () => {
+  if (!movieList.classList.contains("movie-watchlist")) {
+    return;
+  }
+
+  const IDsList = JSON.parse(window.localStorage.getItem("IDsList") || "[]");
+
+  if (!IDsList.length) {
+    return;
+  }
+  emptyWatchlist.style.display = "none";
+  const moviesWatchlist = await fetchMovies(IDsList);
+  showMovies(moviesWatchlist);
+};
+
+showWatchlist();
