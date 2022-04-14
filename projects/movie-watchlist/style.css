@@ -151,12 +151,13 @@ h1 {
   cursor: pointer;
   transition: all ease-in-out 250ms;
 }
+
 .search-button:hover {
   background-color: var(--search-text-color);
   color: var(--search-button-color);
 }
 
-.search-results {
+.main-container {
   padding-bottom: 4rem;
 }
 

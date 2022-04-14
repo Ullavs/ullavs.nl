@@ -431,7 +431,7 @@ header {
   width: 6rem;
   height: 1px;
   margin: 0.5em auto 1em;
-  background: var(--color-light);
+  background: var(--color-accent);
   opacity: 0.25;
 }
 
@@ -464,14 +464,12 @@ header {
 }
 
 .skills-content {
-  background-color: var(--color-accent);
   color: var(--color-light);
   border-radius: 0.2rem;
   padding: 1rem;
   margin-bottom: 0.5rem;
   width: 100%;
   text-align: left;
-  box-shadow: var(--boxshadow);
 }
 
 .skills-content h3 {
@@ -523,15 +521,19 @@ header {
   max-width: 1400px;
   margin: 0 auto;
 }
+
 .portfolio-item {
   position: relative;
   border-radius: 8px;
   overflow: hidden;
 }
+
 .portfolio-img {
   width: 100%;
   border-radius: 8px;
+  image-rendering: -webkit-optimize-contrast;
 }
+
 .hover-items {
   width: 100%;
   height: 120%;
@@ -549,7 +551,7 @@ header {
   flex-direction: column;
   padding: 1rem;
   opacity: 0.9;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: all 0.7s cubic-bezier(0.95, -0.1, 0.02, 1.65) 0.3s;
 }
 
@@ -568,60 +570,6 @@ header {
 .portfolio-item:hover .hover-items {
   transform: translateY(0);
 }
-
-/* PORTFOLIO EINDE */
-
-/* 
-
-.portfolio-item {
-  background-color: var(--color-accent);
-  overflow: hidden;
-  display: grid;
-  text-decoration: none;
-  color: var(--color-light);
-  border: 1px solid var(--color-accent);
-}
-
-.portfolio-img {
-  grid-area: 1 / 1;
-  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1);
-}
-
-.hover-items {
-  grid-area: 1 / 1;
-  padding: 2rem;
-  font-size: 1rem;
-  background-color: rgba(224, 135, 0, 0.79);
-  background-color: var(--color-light);
-  color: var(--color-accent);
-  transition: background-color 250ms linear;
-  position: relative;
-  z-index: 2;
-}
-
-.portfolio-item-text h3 {
-  margin-bottom: 1.5rem;
-  font-weight: var(--fontsize-small);
-  font-size: 2rem;
-}
-
-.portfolio-item-text p {
-  margin-bottom: 1rem;
-  line-height: 1.5;
-} */
-
-/* .portfolio-item:hover .portfolio-img,
-.portfolio-item:focus .portfolio-img {
-  transform: scale(1.1);
-} */
-
-/* .portfolio-item:hover .portfolio-item-text,
-.portfolio-item:focus .portfolio-item-text {
-  background-color: rgba(255, 153, 0, 0.6);
-  background-color: var(--color-accent);
-  color: var(--color-light);
-  border: 1px solid var(--color-light);
-} */
 
 /* Footer */
 

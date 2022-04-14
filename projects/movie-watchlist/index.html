@@ -23,7 +23,7 @@
       </div>
     </header>
 
-    <main class="container">
+    <main class="main-container container">
       <form class="search-bar" id="search-bar">
         <label class="search-label" aria-label="search" for="search"
           ><img src="search-icon.svg" width="16" height="16" alt="search icon"
@@ -39,20 +39,18 @@
         <button class="search-button">Search</button>
       </form>
 
-      <div class="search-results">
-        <div class="start-exploring" id="start-exploring">
-          <img src="start-exploring.svg" width="70" height="61.25" alt="" />
-          <p class="start-exploring-text">Start exploring</p>
-        </div>
-
-        <div class="unable" id="unable">
-          <p>
-            Unable to find what you're looking for. Please try another search.
-          </p>
-        </div>
-
-        <div class="movie-list" id="movie-list"></div>
+      <div class="start-exploring" id="start-exploring">
+        <img src="start-exploring.svg" width="70" height="61.25" alt="" />
+        <p class="start-exploring-text">Start exploring</p>
       </div>
+
+      <div class="unable" id="unable">
+        <p>
+          Unable to find what you're looking for. Please try another search.
+        </p>
+      </div>
+
+      <div class="movie-list" id="movie-list"></div>
     </main>
 
     <script src="app.js"></script>
