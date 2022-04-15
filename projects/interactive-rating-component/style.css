@@ -7,13 +7,6 @@
   color: hsl(228, 45%, 44%);
 } */
 
-/* 
-The designs were created to the following widths:
-- Mobile: 375px
-- Desktop: 1440px
-
- */
-
 *,
 *::before,
 *::after {
@@ -98,12 +91,6 @@ body {
   }
 }
 
-/* Container - rating */
-
-/* .container-rating {
-  display: none;
-} */
-
 .star-icon {
   background-color: var(--background-color-icons-buttons);
   font-weight: 1rem;
@@ -159,6 +146,7 @@ p {
   color: var(--white-color);
 }
 
+.button.active,
 .button:active,
 .button:focus {
   background-color: var(--light-grey-color);
@@ -182,12 +170,8 @@ p {
   color: var(--accent-color);
 }
 
-/* -------- */
-
-/* Container - thank you */
-
 .container-thank-you {
-  /* display: none; */
+  display: none;
   text-align: center;
 }
 
@@ -205,7 +189,7 @@ h2 {
   display: inline-block;
   padding: 0.65rem;
   border-radius: 2rem;
-  margin: 1rem;
+  margin: 1rem 0 0.5rem;
 }
 
 @media (min-width: 700px) {

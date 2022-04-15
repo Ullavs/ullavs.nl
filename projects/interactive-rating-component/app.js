@@ -1,16 +1,26 @@
-// - nummer aanklikken --> nummer onthoudne
-// - submit --> volgende pagina en nummer laten zien
-// - ene pagina verdwijnt en andere verschijnt
-
 const buttons = document.querySelectorAll(".button");
 const submit = document.getElementById("submit");
+const rating = document.getElementById("rating");
+const thanksContainer = document.getElementById("thanks-container");
+const ratingContainer = document.getElementById("ratings-container");
+let number = null;
 
 buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    console.log("Hallo!");
+  button.addEventListener("click", (event) => {
+    const active = document.querySelector(".active");
+    if (active) {
+      active.classList.remove("active");
+    }
+    event.target.classList.add("active");
+
+    number = event.target.textContent;
+    rating.innerHTML = number;
   });
 });
 
-buttons.map((button) => {
-  console.log("button");
+submit.addEventListener("click", () => {
+  if (number) {
+    ratingContainer.style.display = "none";
+    thanksContainer.style.display = "block";
+  }
 });
