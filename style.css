@@ -36,7 +36,17 @@
   }
 }
 
-/* General styles */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --color-light: #303030;
+    --color-dark: #fff;
+    --color-accent: #ff9900;
+  }
+} */
+
+/* Eventueel mooie kleuren? 
+- #f5f8fd;
+- #133058; */
 
 ::selection {
   color: var(--color-light);
