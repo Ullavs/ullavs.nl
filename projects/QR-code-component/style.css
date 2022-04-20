@@ -1,0 +1,104 @@
+/* 
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+*/
+
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --dark-blue: hsl(218, 44%, 22%);
+  --font-size-paragraph: 15px;
+  --font-family: "Outfit", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-family);
+  display: grid;
+  place-content: center;
+  background-color: var(--light-gray);
+  text-align: center;
+}
+
+.card {
+  background-color: var(--white-color);
+  max-width: 320px;
+  max-height: 500px;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+.qr-image {
+  border-radius: 0.75rem;
+}
+
+h1 {
+  font-size: 1.4rem;
+  color: var(--dark-blue);
+  margin: 1rem 0.5rem;
+}
+
+p {
+  color: var(--grayish-blue);
+  margin: 0 0.5rem 1rem;
+}
+
+.attribution {
+  color: var(--white-color);
+  font-size: 0.6rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+}
+.attribution a {
+  color: var(--grayish-blue);
+  text-decoration: none;
+}
