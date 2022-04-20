@@ -62,8 +62,7 @@ body {
 
 .card {
   background-color: var(--white-color);
-  max-width: 320px;
-  max-height: 500px;
+  width: 320px;
   margin: 1rem;
   padding: 1rem;
   border-radius: 0.75rem;
@@ -89,7 +88,7 @@ p {
   color: var(--grayish-blue);
   font-size: 0.6rem;
   text-align: center;
-  margin-top: 2rem;
+  margin: 2rem 0;
   font-style: italic;
 }
 .attribution a {
