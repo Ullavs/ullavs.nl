@@ -17,7 +17,7 @@ It's a one page website with multiple sections, e.g. 'about me', 'skills', 'work
 - [ ] On each project a link to the GitHub page and live URL
 
 ### Live URL
-You can check it out on this [link](https://ullavs.nl)
+You can check the portfolio website via this [link](https://ullavs.nl)
 
 <br>
 
