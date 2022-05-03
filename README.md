@@ -3,7 +3,6 @@
 ### Description
 This is my portfolio site which shows a selection of my projects, certificates and contact details organized in a better way.
 It's a one page website with multiple sections, e.g. 'about me', 'skills', 'work', 'contact'.  
-In this repository you are able to see earlier projects as well (in the projects folder), which are not showcased via the website anymore. 
 
 ### Built with
 - Semantic HTML5 markup
@@ -19,3 +18,8 @@ In this repository you are able to see earlier projects as well (in the projects
 
 ### Live URL
 You can check it out on this [link](https://ullavs.nl)
+
+#### Earlier projects
+In this repository you are able to see earlier projects as well (in the projects folder), which are not showcased via the website anymore. 
+- First project: [cocktails](https://ullavs.nl/projects/cocktails)
+- 
