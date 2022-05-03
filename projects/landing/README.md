@@ -4,8 +4,6 @@
 
 This is an assignment for [freeCodeCamp](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page/)
 
-<br>
-
 ### Requirements
 
 1. My product landing page should have a header element with a corresponding id="header".
