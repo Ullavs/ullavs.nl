@@ -4,8 +4,6 @@
 
 This is an assignment for [freeCodeCamp](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-survey-form/)
 
-<br>
-
 ### Requirements
 
 1. I can see a title with id="title" in H1 sized text.
@@ -25,14 +23,10 @@ This is an assignment for [freeCodeCamp](https://www.freecodecamp.org/learn/resp
 15. Inside the form element, I am presented with a textarea at the end for additional comments.
 16. Inside the form element, I am presented with a button with id="submit" to submit all my inputs.
 
-<br>
-
 ### Built with
 
 - HTML5
 - CSS3
-
-<br>
 
 ### Live URL
 

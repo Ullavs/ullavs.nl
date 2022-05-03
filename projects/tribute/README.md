@@ -4,8 +4,6 @@
 
 This is an assignment for [freeCodeCamp](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-tribute-page/)
 
-<br>
-
 ### Requirements
 
 1. My tribute page should have an element with a corresponding id="main", which contains all other elements.
@@ -18,14 +16,10 @@ This is an assignment for [freeCodeCamp](https://www.freecodecamp.org/learn/resp
 8. The img element should responsively resize, relative to the width of its parent element, without exceeding its original size.
 9. The img element should be centered within its parent element.
 
-<br>
-
 ### Built with
 
 - HTML5
 - CSS3
-
-<br>
 
 ### Live URL
 

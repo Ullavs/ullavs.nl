@@ -4,8 +4,6 @@
 
 This is an assignment for [freeCodeCamp](https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-technical-documentation-page/)
 
-<br>
-
 ### Requirements
 
 1. I can see a main element with a corresponding id="main-doc", which contains the page's main content (technical documentation).
@@ -24,15 +22,11 @@ This is an assignment for [freeCodeCamp](https://www.freecodecamp.org/learn/resp
 14. On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
 15. My Technical Documentation page should use at least one media query.
 
-<br>
-
 ### Built with
 
 - HTML5
 - CSS3
 - Mobile-first workflow
-
-<br>
 
 ### Live URL
 

@@ -24,16 +24,12 @@ This is an assignment for [freeCodeCamp](https://www.freecodecamp.org/learn/resp
 14. My product landing page should have at least one media query.
 15. My product landing page should utilize CSS flexbox at least once.
 
-<br>
-
 ### Built with
 
 - HTML5
 - CSS3
 - CSS Flexbox
 - Mobile-first workflow
-
-<br>
 
 ### Live URL
 
