@@ -1,7 +1,7 @@
 # Portfolio website
 
 ### Description
-This is my portfolio site which shows a selection of my projects, certificates and contact details organized in a better way.
+This is my portfolio site which shows a selection of my projects, certificates and contact details.
 It's a one page website with multiple sections, e.g. 'about me', 'skills', 'work', 'contact'.  
 
 ### Built with
@@ -22,6 +22,5 @@ You can check the portfolio website via this [link](https://ullavs.nl)
 <br>
 
 #### Earlier projects
-In this repository you are able to see earlier projects as well (in the projects folder), some of which are not showcased via the website anymore. 
-- Assignment for [SheCodes](https://shecodes.io): [cocktails](https://ullavs.nl/projects/cocktails)
-- Assignment for [freeCodeCamp](https://www.freecodecamp.org/): [tribute page](https://ullavs.nl/projects/tribute/)
+In the projects folder in this repository you are able to see earlier projects as well, some of which are not showcased via the website anymore. 
+
