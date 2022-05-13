@@ -15,6 +15,7 @@ It's a one page website with multiple sections, e.g. 'about me', 'skills', 'work
 - [ ] Improve the overall design
 - [ ] Light and dark version
 - [ ] On each project a link to the GitHub page and live URL
+- [ ] Rebuild using React
 
 ### Live URL
 You can check the portfolio website via this [link](https://ullavs.nl)
