@@ -495,11 +495,12 @@ header {
 
 @media (min-width: 1000px) {
   .skills-container {
-    display: grid;
-    grid-template-columns: minmax(0, 200px) minmax(0, 200px) minmax(0, 700px);
+    grid-template-columns: 1fr 1fr 2fr;
     grid-gap: 2rem;
     place-content: center;
     grid-template-areas: "skills tools certificates";
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 
