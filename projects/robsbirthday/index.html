@@ -41,6 +41,15 @@
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
 
+      .disabled-cards {
+        width: 150px;
+        height: 150px;
+        border: none;
+        perspective: 1000px;
+        margin: 0 auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
       .card-container {
         margin: 0 auto;
       }
@@ -144,7 +153,7 @@
       </button>
 
       <div class="card-container">
-        <div class="card" onclick="flipCard(this)">
+        <div class="disabled-cards card">
           <div class="card-inner">
             <div class="card-front">Activiteit 6</div>
             <div class="card-back">
@@ -157,7 +166,7 @@
             </div>
           </div>
         </div>
-        <div class="card" onclick="flipCard(this)">
+        <div class="disabled-cards card">
           <div class="card-inner">
             <div class="card-front">Activiteit 23</div>
             <div class="card-back">
@@ -170,18 +179,18 @@
 
     <script>
       function flipCard(card) {
-        if (
-          !card.classList.contains("button-random") &&
-          card.classList.contains("card")
-        ) {
+        if (card.classList.contains("card")) {
           card.classList.toggle("card-flipped");
         }
       }
 
       function flipRandomCard() {
-        var cards = document.querySelectorAll(".card-container .card");
-        var randomIndex = Math.floor(Math.random() * cards.length);
+        if (document.querySelector(".done")) return;
+
+        let cards = document.querySelectorAll(".card-container .card");
+        let randomIndex = Math.floor(Math.random() * cards.length);
         flipCard(cards[randomIndex]);
+        cards.forEach((card) => card.classList.add("done"));
       }
     </script>
   </body>
