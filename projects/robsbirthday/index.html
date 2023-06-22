@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robs Birthday</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="images/favicon.ico" />
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        scroll-padding-top: 80px;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.5;
+      }
+
+      .card {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        perspective: 1000px;
+        position: relative;
+      }
+
+      .card-inner {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+      }
+
+      .card-flipped .card-inner {
+        transform: rotateY(180deg);
+      }
+
+      .card-front,
+      .card-back {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        backface-visibility: hidden;
+      }
+
+      .card-front {
+        background-color: lightblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      .card-back {
+        background-color: lightgreen;
+        transform: rotateY(180deg);
+      }
+
+      .button {
+        margin-top: 20px;
+      }
+
+      .card-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .card-container .card {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header id="header"><h1 id="home">Robs Gift Picker</h1></header>
+
+      <div class="card" onclick="flipCard(this)">
+        <div class="card-inner">
+          <div class="card-front">Click to flip</div>
+          <div class="card-back">
+            <img src="path/to/image.jpg" alt="Flipped Card" />
+          </div>
+        </div>
+      </div>
+
+      <button onclick="flipRandomCard()">Flip Random Card</button>
+
+      <div class="card-container">
+        <div class="card" onclick="flipCard(this)"></div>
+        <div class="card" onclick="flipCard(this)"></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <hr />
+      Coded by
+      <a href="https://ullavs.nl/" id="ullavs-ref">Ulla🆚</a>
+      <hr />
+    </footer>
+  </body>
+
+  <script>
+    function flipCard(card) {
+      card.classList.toggle("card-flipped");
+    }
+
+    function flipRandomCard() {
+      var cards = document.querySelectorAll(".card-container .card");
+      var randomIndex = Math.floor(Math.random() * cards.length);
+      flipCard(cards[randomIndex]);
+    }
+  </script>
+</html>
