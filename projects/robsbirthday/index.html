@@ -9,7 +9,7 @@
       href="https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="images/favicon.ico" />
+    <link rel="icon" href="favicon.ico" />
     <style>
       *,
       *::before,
@@ -22,14 +22,23 @@
       body {
         font-family: "Poppins", sans-serif;
         line-height: 1.5;
+        margin: 2rem;
+        text-align: center;
+        font-size: 14px;
+        background-color: #f7d7d0;
+      }
+
+      main {
+        margin-block: 2rem;
       }
 
       .card {
-        width: 200px;
-        height: 200px;
-        border: 1px solid black;
+        width: 150px;
+        height: 150px;
+        border: none;
         perspective: 1000px;
-        position: relative;
+        margin: 0 auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
 
       .card-inner {
@@ -38,6 +47,7 @@
         position: absolute;
         transform-style: preserve-3d;
         transition: transform 0.6s;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
 
       .card-flipped .card-inner {
@@ -50,10 +60,13 @@
         height: 100%;
         position: absolute;
         backface-visibility: hidden;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
 
       .card-front {
-        background-color: lightblue;
+        background-color: orangered;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -61,18 +74,28 @@
       }
 
       .card-back {
-        background-color: lightgreen;
         transform: rotateY(180deg);
+        background-color: lightgreen;
       }
 
-      .button {
-        margin-top: 20px;
+      .button-random {
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      .text {
+        margin-block: 2rem;
+        text-align: justify;
       }
 
       .card-container {
         display: flex;
-        justify-content: space-between;
-        margin-top: 20px;
+        margin-top: 2rem;
+        max-width: 400px;
+        justify-content: center;
       }
 
       .card-container .card {
@@ -81,42 +104,81 @@
     </style>
   </head>
   <body>
+    <header id="header">
+      <h1 id="home">
+        Robs 39e verjaardag! <br />
+        🥳🥳🥳
+      </h1>
+    </header>
+
     <main>
-      <header id="header"><h1 id="home">Robs Gift Picker</h1></header>
+      <p class="text">
+        Hey liefje, <br />
+        Gefeliciteerd met je verjaardag! Voor mijn Federer van het programmeren,
+        moest ik natuurlijk wel iets in elkaar zetten. Let alsjeblieft niet op
+        de codekwaliteit, ik heb het heel snel gedaan (met wat hulp van
+        ChatGPT). Eerst mag je op het oranje kaartje klikken om het iets
+        vertraagde cadeau te onthullen 😃 Lees daarna eronder verder!
+      </p>
 
       <div class="card" onclick="flipCard(this)">
         <div class="card-inner">
-          <div class="card-front">Click to flip</div>
+          <div class="card-front">Klik hier om je cadeautje te zien!</div>
           <div class="card-back">
-            <img src="path/to/image.jpg" alt="Flipped Card" />
+            <img src="bottle.png" alt="bottle" width="150px" height="150px" />
           </div>
         </div>
       </div>
 
-      <button onclick="flipRandomCard()">Flip Random Card</button>
+      <p class="text">
+        Op de achterkant van onderstaande kaartjes staat een activiteit, je mag
+        zelf kiezen welke je wilt krijgen voor je verjaardag! Althans... je mag
+        zelf op de knop klikken en dan bepaalt het lot wat het wordt!
+      </p>
+      <button class="button-random" onclick="flipRandomCard()">
+        Kies je cadeau!
+      </button>
 
       <div class="card-container">
-        <div class="card" onclick="flipCard(this)"></div>
-        <div class="card" onclick="flipCard(this)"></div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front">Activiteit 6</div>
+            <div class="card-back">
+              <img
+                src="mountainbike.png"
+                alt="mountainbike"
+                width="150px"
+                height="150px"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front">Activiteit 23</div>
+            <div class="card-back">
+              <img src="golf.png" alt="golf" width="150px" height="150px" />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
-    <footer class="footer">
-      <hr />
-      Coded by
-      <a href="https://ullavs.nl/" id="ullavs-ref">Ulla🆚</a>
-      <hr />
-    </footer>
+
+    <script>
+      function flipCard(card) {
+        if (
+          !card.classList.contains("button-random") &&
+          card.classList.contains("card")
+        ) {
+          card.classList.toggle("card-flipped");
+        }
+      }
+
+      function flipRandomCard() {
+        var cards = document.querySelectorAll(".card-container .card");
+        var randomIndex = Math.floor(Math.random() * cards.length);
+        flipCard(cards[randomIndex]);
+      }
+    </script>
   </body>
-
-  <script>
-    function flipCard(card) {
-      card.classList.toggle("card-flipped");
-    }
-
-    function flipRandomCard() {
-      var cards = document.querySelectorAll(".card-container .card");
-      var randomIndex = Math.floor(Math.random() * cards.length);
-      flipCard(cards[randomIndex]);
-    }
-  </script>
 </html>
